@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            background-color: red;
+            height: 90vh;
+            width: 80vw;
+            margin: 0px auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            /* grid-template-rows: 80px 1fr 80px; */
+
+            grid-template-areas: "header header header header"
+                "sidebar content content messenger"
+                "footer footer footer footer";
+        }
+
+        .item {
+            background-color: yellow;
+            /* padding: 30px; */
+            /* padding-top: 12px; */
+            border: 2px solid black;
+            text-align: center;
+            align-content: center;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+
+        #item1 {
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+            grid-area: header;
+        }
+
+        #item2 {
+            /* grid-row-start: 2;
+            grid-row-end: 3; */
+            grid-area: sidebar;
+        }
+
+        #item3 {
+            grid-area: content;
+        }
+
+        #item4 {
+            grid-area: messenger;
+        }
+
+        #item5 {
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="item" id="item1">Main navbar</div>
+        <div class="item" id="item2">SideBar</div>
+        <div class="item" id="item3">
+            Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero provident voluptatum
+            quaerat hic suscipit soluta vitae blanditiis, in atque quam quae laborum dicta excepturi, quod at aliquam
+            nostrum obcaecati optio dolorum eos neque corrupti maxime illo eligendi? In debitis vero nisi quibusdam?
+            Excepturi quam necessitatibus laborum laboriosam saepe veniam ex tempore! Fugiat culpa dignissimos in, odit
+            voluptatum est facere distinctio quos, molestiae aliquid molestias tenetur quam et temporibus cupiditate
+            voluptas mollitia! Dolorem tempore quod tenetur, corrupti modi esse vitae ducimus soluta tempora dicta
+            quidem, saepe vel maxime iste eum nostrum itaque! Eos dignissimos autem corrupti voluptatibus commodi,
+            laboriosam animi hic sit placeat quidem id veritatis esse labore ipsum perspiciatis, accusamus libero ea
+            illum atque? Assumenda, cumque ducimus sit nihil amet quas laudantium esse consectetur? Repudiandae
+            exercitationem corrupti amet eius et veniam recusandae eveniet. Ducimus dolores nisi fuga nihil nobis
+            accusantium ratione animi quidem et, soluta eligendi molestias, rem exercitationem at cum, perferendis rerum
+            nulla voluptatibus nam? Autem perspiciatis non deserunt modi voluptatibus distinctio nostrum earum repellat,
+            tenetur saepe odio reprehenderit esse ut reiciendis? Ad ducimus vero, aspernatur eum eligendi alias
+            accusamus pariatur voluptatem aperiam consectetur quia aliquid vitae, voluptate totam minima. Consequatur
+            harum fuga amet qui ab dicta voluptate laboriosam mollitia accusamus, laudantium quisquam magni ducimus
+            cumque quaerat nostrum voluptates saepe? Minima natus reiciendis repudiandae, cum ab ullam eaque dolorum rem
+            illo error inventore nulla eveniet, incidunt numquam laborum? Cupiditate modi commodi ipsam earum voluptatem
+            molestias officia voluptates laudantium voluptatibus asperiores, dolor perspiciatis perferendis pariatur
+            libero beatae quibusdam blanditiis odio, temporibus possimus nesciunt assumenda non a. Officia quam dolores,
+            quidem iste temporibus fugiat ratione. Nesciunt quis reprehenderit culpa tempora eveniet ratione incidunt
+            voluptatum neque placeat, ducimus natus aperiam quae nostrum ipsum explicabo dicta sapiente fuga asperiores
+            maxime dignissimos modi! Consequatur itaque recusandae ullam nihil cum, saepe odio, labore explicabo
+            consectetur ab necessitatibus deleniti modi? Facilis natus nemo ut expedita nulla eligendi eaque, eius non,
+            tempora asperiores nisi accusamus a molestias dolor itaque porro assumenda ullam! Mollitia quis magnam
+            consectetur dicta at rerum voluptate, ratione placeat eum quam deleniti ad natus suscipit accusantium
+            dolorum recusandae voluptatum quas ea labore accusamus, tenetur pariatur sapiente! Est quia omnis minus
+            delectus voluptatibus quae, inventore consectetur exercitationem. Alias quisquam eveniet, perspiciatis
+            consequatur molestiae temporibus rem, nemo consequuntur suscipit quos debitis aliquid, reprehenderit
+            dignissimos! Perferendis iure eos debitis voluptates ipsam, quae aut nihil cumque accusantium. Molestiae
+            quia rem pariatur assumenda illum debitis reiciendis. Quos, doloremque nobis.
+        </div>
+        <div class="item" id="item4">messenger</div>
+        <div class="item" id="item5">footer</div>
+        <!--
+        <div class="item" id="item6">6</div>
+        <div class="item" id="item7">7</div>
+        <div class="item" id="item8">8</div>
+        <div class="item" id="item9">9</div> -->
+    </div>
+</body>
+
+</html>

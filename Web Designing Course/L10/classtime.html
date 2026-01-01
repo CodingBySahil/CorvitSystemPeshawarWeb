@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+
+        }
+
+        p {
+            font-size: 28px;
+        }
+
+        .box {
+            background-color: rgb(103, 249, 5);
+            padding: 12px;
+            border: 1px solid hotpink;
+            /* width: 100px;
+            height: 100px; */
+        }
+
+        .flex-container-div {
+            margin: 80px;
+            border: 2px solid red;
+            height: 500px;
+            display: flex;
+            gap: 12px;
+            flex-direction: row;
+            justify-content: flex-start;
+            /* align-items: space-between; */
+            /* flex-wrap: wrap; */
+
+
+        }
+
+        #item2 {
+            flex-grow: 5;
+        }
+
+        #item3 {
+            /* flex-shrink: 12;
+            min-width: 80px;
+            background-color: yellow; */
+            flex-grow: 1;
+        }
+
+        #item4 {
+            flex-shrink: 2;
+        }
+
+        .vedioparent {
+            display: flex;
+            gap: 20px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="background-color: red; color: yellow; padding: 8px; text-align: center;">This is flexbox class</h1>
+    <div class="flex-container-div">
+        <p class="box" id="item1" style="">sidebar</p>
+        <div class="box vedioparent" id="item2" style="">
+            <p style="background-color: yellow; height: 80px; padding: 12px; border-radius: 6px; flex-grow: 1;">vedio 1</p>
+            <p style="background-color: yellow; height: 80px; padding: 12px; border-radius: 6px; flex-grow: 1;">vedio 1</p>
+            <p style="background-color: yellow; height: 80px; padding: 12px; border-radius: 6px; flex-grow: 1;">vedio 1</p>
+            <p style="background-color: yellow; height: 80px; padding: 12px; border-radius: 6px; flex-grow: 1;">vedio 1</p>
+            <p style="background-color: yellow; height: 80px; padding: 12px; border-radius: 6px; flex-grow: 1;">vedio2</p>
+            <p style="background-color: yellow; height: 80px; padding: 12px; border-radius: 6px; flex-grow: 1;"> vedio3</p>
+        </div>
+        <p class="box" id="item3">messenger</p>
+        <!-- <p class="box" id="item4" style="">4</p>
+        <p class="box" id="item5" style="">5</p>
+        <p class="box" id="item6">6</p>
+        <p class="box" id="item7" style="">7</p>
+        <p class="box" id="item8" style="">8</p>
+        <p class="box" id="item9">9</p> -->
+    </div>
+</body>
+
+</html>

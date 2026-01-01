@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 7 - Box Model & Display</title>
+
+    <!--
+  =======================================================
+        CLASS 7: BOX MODEL & DISPLAY EXPLANATION
+  ================ =======================================
+
+  BOX MODEL
+  Every HTML element is a box. The box has four layers:
+
+  1) Content → the actual text, image, or content
+  2) Padding → space between content and border
+  3) Border → line around the box
+  4) Margin → space outside the border
+
+  Total width = content + padding + border + margin
+
+  BOX SIZING
+  1) content-box → default, width applies only to content
+  2) border-box → width includes padding + border
+
+  DISPLAY TYPES
+  1) block → takes full width, starts on new line
+  2) inline → fits content, stays in same line
+  3) inline-block → like inline but allows width & height
+  -->
+
+    <style>
+        /* =====================================================
+       BOX MODEL EXAMPLES
+    ===================================================== */
+
+        /* Example 1: Content + Padding + Border + Margin */
+        .box-example {
+            width: 200px;
+            /* width of content */
+            padding: 20px;
+            /* space inside the box */
+            border: 5px solid blue;
+            /* border around box */
+            margin: 20px;
+            /* space outside the box */
+            background-color: lightyellow;
+        }
+
+        /* =====================================================
+       BOX SIZING EXAMPLES
+    ===================================================== */
+        /* Default content-box */
+        .content-box-example {
+            box-sizing: content-box;
+            /* default */
+            width: 200px;
+            padding: 20px;
+            border: 5px solid green;
+            margin: 10px;
+            background-color: lightgreen;
+        }
+
+        /* border-box example */
+        .border-box-example {
+            box-sizing: border-box;
+            /* includes padding + border */
+            width: 200px;
+            padding: 20px;
+            border: 5px solid red;
+            margin: 10px;
+            background-color: lightcoral;
+        }
+
+        /* =====================================================
+       DISPLAY TYPES
+    ===================================================== */
+        /* block element */
+        .block-example {
+            display: block;
+            /* takes full width */
+            background-color: #d0f0fd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* inline element */
+        .inline-example {
+            display: inline;
+            /* fits content, stays inline */
+            background-color: #fdd0d0;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        /* inline-block element */
+        .inline-block-example {
+            display: inline-block;
+            /* inline but allows width & height */
+            width: 150px;
+            height: 50px;
+            background-color: #d0fdd0;
+            padding: 10px;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        /* =====================================================
+       CARD BOX PRACTICE
+    ===================================================== */
+        .card {
+            width: 250px;
+            padding: 20px;
+            border: 2px solid #333;
+            margin: 10px;
+            box-sizing: border-box;
+            /* ensures total width includes padding & border */
+            display: inline-block;
+            /* allows multiple cards in same line */
+            background-color: #f9f9f9;
+            text-align: center;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Class 7: Box Model & Display</h1>
+
+    <!-- =====================================================
+       BOX MODEL EXAMPLES
+  ===================================================== -->
+    <h2>Box Model Example</h2>
+    <div class="box-example">
+        Content inside a box with padding, border & margin.
+    </div>
+
+    <!-- =====================================================
+       BOX SIZING
+  ===================================================== -->
+    <h2>Box Sizing Examples</h2>
+    <div class="content-box-example">
+        content-box → width only includes content
+    </div>
+
+    <div class="border-box-example">
+        border-box → width includes padding + border
+    </div>
+
+    <!-- =====================================================
+       DISPLAY TYPES
+  ===================================================== -->
+    <h2>Display Types</h2>
+    <div class="block-example">Block element (full width)</div>
+    <span class="inline-example">Inline element 1</span>
+    <span class="inline-example">Inline element 2</span>
+    <div class="inline-block-example">Inline-block 1</div>
+    <div class="inline-block-example">Inline-block 2</div>
+
+    <!-- =====================================================
+       CARD BOX PRACTICE
+  ===================================================== -->
+    <h2>Practice: Card Box</h2>
+
+    <div class="card">
+        <img src="img.png" alt="Card Image">
+        <h3>Card Title 1</h3>
+        <p>This is a description for card 1. It explains content inside card.</p>
+    </div>
+
+    <div class="card">
+        <img src="img.png" alt="Card Image">
+        <h3>Card Title 2</h3>
+        <p>This is a description for card 2. It explains content inside card.</p>
+    </div>
+
+    <div class="card">
+        <img src="img.png" alt="Card Image">
+        <h3>Card Title 3</h3>
+        <p>This is a description for card 3. It explains content inside card.</p>
+    </div>
+
+</body>
+
+</html>

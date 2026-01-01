@@ -1,0 +1,201 @@
+<!-- 
+    TAG:
+        A tag is a keyword inside angle brackets.
+        Example: <p>  ,  </p>
+
+    STARTING TAG (Opening Tag):
+        Tells the browser where an element begins.
+        Example: <p>
+
+    ENDING TAG (Closing Tag):
+        Tells the browser where an element ends.
+        Example: </p>
+
+    ELEMENT:
+        An element = Opening tag + Content + Closing tag
+        Example: <p>This is content</p>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        The <meta charset> tells the browser which characters can be displayed.
+        UTF-8 supports all languages including English, Urdu, Arabic, etc.
+    -->
+    <meta charset="UTF-8">
+
+    <!-- 
+        The viewport meta tag makes the page mobile-friendly.
+        It sets the width of the website equal to the device screen.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        <title> sets the name of the tab shown in the browser.
+    -->
+    <title>this is class 4</title>
+</head>
+
+<body>
+
+    <!-- MAIN PAGE HEADING -->
+    <h1>Lists and Class Schedule</h1>
+    <h2>Understanding Lists in HTML</h2>
+
+    <!-- UNORDERED LIST -->
+    <h3>Unordered List (Bullet Points)</h3>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+
+    <ol>
+        <li>apple </li>
+        <li>apple 2</li>
+        <li>apple 3</li>
+    </ol>
+    <ol>
+        <li>this is something</li>
+        <li>this is something</li>
+        <li>this is something</li>
+        <li>this is something</li>
+        <li>this is something</li>
+        <li>this is something</li>
+        <li>this is something</li>
+        <li>this is something</li>
+    </ol>
+
+    <dl>
+        <dt>CR7</dt>
+        <dd>Best Footballer in the World</dd>
+        <dt>JR</dt>
+        <!-- <dd>Nemar</dd>
+        <dt>Babar azam</dt>
+        <dd>Best Batsman in the World</dd>
+        <dt>hello</dt> -->
+
+    </dl>
+
+
+
+
+
+
+    <!-- ORDERED LIST -->
+    <h3>Ordered List (Numbering)</h3>
+    <ol>
+        <li>Step One</li>
+        <li>Step Two</li>
+        <li>Step Three</li>
+        <li>Step Four</li>
+    </ol>
+
+    <!-- DESCRIPTION LIST -->
+    <h3>Description List (Word + Meaning)</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>The standard language for creating webpages.</dd>
+
+        <dt>CSS</dt>
+        <dd>Used for designing and styling webpages.</dd>
+
+        <dt>JavaScript</dt>
+        <dd>Used to make webpages interactive.</dd>
+    </dl>
+
+    <!-- TABLES SECTION -->
+    <h2>HTML Tables</h2>
+
+    <!-- SIMPLE TABLE -->
+    <h3>Simple Table Example</h3>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Sahil</td>
+            <td>22</td>
+        </tr>
+    </table>
+
+
+
+
+    <h1>class time table</h1>
+    <table border="1" width="1000">
+        <tr>
+            <th>Roll no</th>
+            <th>CNIC</th>
+            <th>contact</th>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>17394523945</td>
+            <td>03213123</td>
+        </tr>
+    </table>
+    <!-- TABLE WITH BORDER AND WIDTH -->
+    <h3>Table With Border and Width</h3>
+    <table border="1" width="400">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>20</td>
+        </tr>
+    </table>
+
+    <!-- CLASS SCHEDULE TABLE (Your Requirement) -->
+    <h2>Our Class Schedule</h2>
+    <p>Timing: <b>2 PM to 3 PM</b> — Days: <b>Monday to Friday</b></p>
+
+    <table border="1" width="500">
+
+        <!-- Table Header -->
+        <tr>
+            <th>Day</th>
+            <th>Course Name</th>
+            <th>Details</th>
+        </tr>
+
+        <!-- Monday to Friday (one row for each day) -->
+        <tr>
+            <td rowspan="5">2 PM - 3 PM (Daily)</td>
+            <td rowspan="5">Web Course</td>
+            <td>1 Month Web Designing</td>
+        </tr>
+
+        <tr>
+            <td>2 Months Web Development</td>
+        </tr>
+
+        <!-- Extra rows to show 5 weekdays -->
+        <tr>
+            <td>Same Schedule (Monday & Tuesday)</td>
+        </tr>
+
+        <tr>
+            <td>Same Schedule (Wednesday)</td>
+        </tr>
+
+        <tr>
+            <td>Same Schedule (Thursday & Friday)</td>
+        </tr>
+
+        <!-- Example of colspan -->
+        <tr>
+            <td colspan="3"><b>Note:</b> This course lasts for 3 months in total.</td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

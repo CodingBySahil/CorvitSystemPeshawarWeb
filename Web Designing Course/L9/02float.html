@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float & Clear</title>
+
+    <!--
+    ============================
+         FLOAT & CLEAR
+    ============================
+
+    float: left / right
+    - Pushes element to left or right
+    - Text flows around it
+
+    clear: both
+    - Stops floating effect
+    - Next element appears below floated items
+
+    Real Life Example:
+    - Newspaper with image on left and text beside it
+    -->
+
+    <style>
+        * {
+            /* margin: 0px;
+            border: 2px solid red; */
+        }
+
+        .float-left {
+            float: left;
+            width: 150px;
+            padding: 10px;
+            background: lightblue;
+            margin-right: 10px;
+        }
+
+        .float-right {
+            clear: both;
+            /* float: right; */
+            width: 150px;
+            padding: 10px;
+            background: lightcoral;
+            /* margin-left: 10px; */
+        }
+
+        .clear-both {
+            clear: both;
+            background: lightgreen;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>Float & Clear Example</h1>
+    <h2>Float & Clear Example</h2>
+    <h3>Float & Clear Example</h3>
+    <h4>Float & Clear Example</h4>
+
+    <div class="float-left">Float Left</div>
+    <div class="float-right">Float Right</div>
+
+    <p>
+        Text flows around floated elements just like images in newspapers. This paragraph will wrap around the floating
+        boxes until clear is applied.
+    </p>
+
+    <p class="clear-both">
+        Clear both → stops floating effect and moves this paragraph below.
+    </p>
+
+</body>
+
+</html>

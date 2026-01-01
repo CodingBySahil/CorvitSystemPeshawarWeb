@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Project – Positioning, Floats, rem/em</title>
+
+    <style>
+        /* 
+        =====================================================
+        MINI PROJECT: PROFILE CARD + FLOAT LAYOUT + POSITION
+        =====================================================
+
+        Units:
+        - rem = relative to root font-size (HTML)
+        - em = relative to parent font-size
+
+        Other Concepts:
+        - margin, padding, border, display, positions, float,
+          z-index, hover effect
+        */
+
+        /* Root font size for rem */
+        html {
+            font-size: 16px;
+            /* 1rem = 16px */
+        }
+
+        body {
+            font-family: Arial;
+            background: #f7f7f7;
+            padding: 2rem;
+        }
+
+        /* Header → Sticky */
+        .header {
+            position: sticky;
+            top: 0;
+            background: #222;
+            color: white;
+            padding: 1rem;
+            font-size: 1.3rem;
+            z-index: 10;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            width: 20rem;
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+            position: relative;
+            /* for absolute badge */
+        }
+
+        /* Absolute positioned badge */
+        .badge {
+            position: absolute;
+            right: -0.5rem;
+            top: -0.5rem;
+            background: crimson;
+            color: white;
+            padding: 0.5em 1em;
+            /* em based on parent */
+            font-size: 0.8rem;
+            border-radius: 0.5rem;
+        }
+
+        /* Float layout section */
+        .image-box {
+            float: left;
+            width: 10rem;
+            margin-right: 1rem;
+        }
+
+        .image-box img {
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+
+        .text-box {
+            overflow: hidden;
+            /* Clear float without clear property */
+        }
+
+        /* Fixed button */
+        .fixed-btn {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: royalblue;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* Z-index example */
+        .z1,
+        .z2 {
+            width: 6rem;
+            height: 6rem;
+            position: absolute;
+            top: 32rem;
+            left: 2rem;
+        }
+
+        .z1 {
+            background: green;
+            z-index: 1;
+        }
+
+        .z2 {
+            background: orange;
+            left: 4rem;
+            top: 34rem;
+            z-index: 5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        Mini Project: it will stick at top
+    </div>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+        <div class="badge">NEW</div>
+
+        <h2 style="margin-bottom: 0.5rem; font-size: 1.5rem;">
+            Muhammad Sahil
+        </h2>
+        <p style="font-size: 1rem; color: gray;">
+            Web Developer • MERN Stack • Instructor
+        </p>
+
+        <div class="image-box">
+            <img src="photo.jpg" alt="Profile">
+        </div>
+
+        <div class="text-box">
+            <p style="font-size: 1rem;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nihil ab earum in recusandae aliquid quam
+                ipsa, neque, rerum vero veritatis deleniti repellat quidem impedit</p>
+        </div>
+    </div>
+    <!-- Profile Card -->
+    <div class="profile-card">
+        <div class="badge">NEW</div>
+
+        <h2 style="margin-bottom: 0.5rem; font-size: 1.5rem;">
+            Muhammad Sahil
+        </h2>
+        <p style="font-size: 1rem; color: gray;">
+            Web Developer • MERN Stack • Instructor
+        </p>
+
+        <div class="image-box">
+            <img src="photo.jpg" alt="Profile">
+        </div>
+
+        <div class="text-box">
+            <p style="font-size: 1rem;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nihil ab earum in recusandae aliquid quam
+                ipsa, neque, rerum vero veritatis deleniti repellat quidem impedit</p>
+        </div>
+    </div>
+
+    <!-- Z-Index example -->
+    <div class="z1" style="color: white;">z index low</div>
+    <div class="z2" style="color: white;">z index high</div>
+
+    <!-- Fixed Button -->
+    <div class="fixed-btn">
+        Contact Me
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea voluptates reprehenderit tempora, corporis sapiente mollitia qui aliquid sit voluptate magnam, voluptatum iusto harum totam veritatis ipsa odio quos minima facilis suscipit minus accusantium obcaecati odit! Esse doloremque, est animi praesentium culpa officia dolore debitis deleniti. Quibusdam harum esse voluptate quisquam qui ipsa cum tempora ab, alias in vel aliquam facilis quasi nostrum earum aliquid nihil hic impedit illum asperiores iure eaque voluptas quae? Architecto repellat dolor nobis, impedit delectus eaque nulla inventore commodi perspiciatis quidem? Quibusdam quia at magni maxime quasi quod perferendis. Ullam nemo, nulla rem ipsam illum blanditiis distinctio voluptatum quaerat quae. Minus modi officia ex, totam quam ad reprehenderit, similique corporis neque fugit voluptates necessitatibus nam consequuntur error, est aliquid laborum debitis sunt odio rerum autem atque. Quo consectetur aliquid quis quibusdam quidem fugiat assumenda vero provident exercitationem ratione. Quod perspiciatis deleniti cumque inventore necessitatibus quis eveniet sit ea atque optio iure rem accusamus in sunt blanditiis maiores exercitationem aliquid nesciunt earum a voluptates, beatae nemo velit. Nam est laboriosam dolorum reprehenderit deleniti architecto tenetur illo ratione eos, voluptatem enim eveniet error ut, accusantium nihil illum dolorem quibusdam similique quod libero tempore sint vel pariatur alias! Magni, ea nisi assumenda vel aspernatur aperiam voluptatem, eligendi consectetur delectus reiciendis sed quam. Necessitatibus error voluptate est excepturi quam incidunt tenetur pariatur rem voluptatum architecto fugit debitis repellendus accusantium quaerat vel veniam, ex voluptas facilis blanditiis itaque. Error fuga optio reiciendis quis delectus ratione nemo officiis vel repellendus, cupiditate alias praesentium nesciunt! Mollitia beatae accusantium vel qui et odio recusandae reprehenderit error quasi. Fuga blanditiis numquam rerum quibusdam nam unde corporis voluptatum id itaque, quidem consequatur? Beatae aliquam pariatur vero autem veniam. Labore sunt assumenda eligendi, ipsa doloribus, velit tenetur expedita, ad sapiente reprehenderit fuga. Aliquam velit earum aperiam perspiciatis.</p>
+
+</body>
+
+</html>

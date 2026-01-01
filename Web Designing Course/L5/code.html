@@ -1,0 +1,425 @@
+<!-- 
+======================================================
+   CLASS 5: HTML Forms & Inputs (Full Explanation)
+======================================================
+
+In this class, we will learn:
+
+• <form> tag and its attributes (action, method)
+• GET vs POST method
+• Input types (text, email, number, password, date, file)
+• placeholder attribute
+• Label tag with for + id (why we use it)
+• Textarea rows & cols
+• Checkbox & Radio buttons
+• name & value in radio buttons
+• Select dropdown
+• Submit & Reset buttons
+• Basic validation attributes
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Class 5 – Forms & Inputs</title>
+</head>
+
+<body>
+
+  <!-- ===================================================== -->
+  <!--                     FORM TAG                          -->
+  <!-- ===================================================== -->
+
+  <!-- 
+  <form> tag is used to collect and send user data.
+
+  action attribute:
+  • action="submit.js"
+  • It tells the form WHERE to send the data.
+  Example: if action="save.js", the data goes to save.js
+
+  method attribute:
+  • method="GET"  → sends data in URL (visible)
+    Example: example.com?name=Sahil&age=22
+    Best for: search bars, simple forms
+
+  • method="POST" → sends data secretly (not visible in URL)
+    Best for: login forms, registration forms
+
+  In short:
+  GET = data visible
+  POST = data hidden
+  -->
+
+  <h2>1. Form Tag</h2>
+
+  <form action="submit.js" method="post">
+    <!-- <input type="number" placeholder="" min="1" max="130"> -->
+
+    <!-- <label for="">Name</label> -->
+    <!-- <label for="">Enter your message</label>
+    <textarea rows="6" cols="30"></textarea>
+    <input type="submit" name="" id="">
+    <input type="reset" name="" id=""> -->
+    <!-- <select name="" id="">
+      <option value=""> select yout favorite fruit</option>
+      <option value="">banana</option>
+      <option value="">apple</option>
+      <option value="">starberry</option>
+      <option value="">mango</option>
+      <option value="">orange</option>
+    </select> -->
+    <h2>complete practical form</h2>
+  </form>
+ <div>
+  <label for="">name :</label>
+  <input type="text">
+ </div>
+  <!-- this is for message -->
+  <label for="msg">message</label>
+  <textarea name="message" id="msg"></textarea>
+
+  <!-- dropdown -->
+  <br><br>
+  <label for="">select course</label>
+  <select name="cousre" id="cousre">
+    <option value="">WEB</option>
+    <option value="">css</option>
+    <option value="">js</option>
+  </select>
+
+  <br><br>
+  <!-- checkbox -->
+  <input type="checkbox" id="h">
+  <label for="h">hobbies</label>
+  <input type="checkbox">
+  <label for="">skills</label>
+
+  <br><br>
+  <!-- radio -->
+  <input type="radio" name="gender">
+  <label for="">male</label>
+  <input type="radio" name="gender">
+  <label for="">female</label>
+
+  <input type="submit" name="" id="">
+  <input type="reset" name="" id="">
+  <hr>
+
+
+  <h2>2. Input Types</h2>
+
+
+  <!-- TEXT INPUT -->
+  <!-- 
+  type="text"
+  • Used for normal text input
+  • Example: Name, Username
+  placeholder="Enter your name"
+  • placeholder shows light grey text as hint inside the input box
+  -->
+
+  <h3>Text Input</h3>
+  <input type="text" placeholder="Enter your name">
+
+  <br><br>
+
+
+  <!-- EMAIL INPUT -->
+  <!-- 
+  type="email"
+  • Accepts only valid email format
+  • Browser shows error if '@' is missing
+  -->
+
+  <h3>Email Input</h3>
+  <input type="email" placeholder="Enter your email">
+
+  <br><br>
+
+
+  <!-- NUMBER INPUT -->
+  <!-- 
+  type="number"
+  • Only allows numbers (0-9)
+  • Used for: Age, Marks, Quantity
+  -->
+
+  <h3>Number Input</h3>
+  <input type="number" placeholder="Enter your age">
+
+  <br><br>
+
+
+  <!-- PASSWORD INPUT -->
+  <!-- 
+  type="password"
+  • Hides characters with dots (••••)
+  • Used for passwords or sensitive inputs
+  -->
+
+  <h3>Password Input</h3>
+  <input type="password" placeholder="Enter password">
+
+  <br><br>
+
+
+  <!-- DATE INPUT -->
+  <!-- 
+  type="date"
+  • Opens calendar picker
+  • Used for selecting dates
+  -->
+
+  <h3>Date Input</h3>
+  <input type="date">
+
+  <br><br>
+
+
+  <!-- FILE INPUT -->
+  <!-- 
+  type="file"
+  • Used to upload images, PDFs, documents, etc.
+  -->
+
+  <h3>File Input</h3>
+  <input type="file">
+
+  <hr>
+
+
+  <!-- ===================================================== -->
+  <!--                 LABEL + FOR + ID                      -->
+  <!-- ===================================================== -->
+
+  <!-- 
+  LABEL:
+
+  Why use label?
+  • Clicking label focuses the input (more user-friendly)
+
+  Why use for + id?
+  • for="username" connects label to input
+  • id="username" must match the label's for
+
+  Example:
+  <label for="username">Name:</label>
+  <input id="username">
+
+  Now clicking "Name:" will focus the input box.
+  -->
+
+  <h2>3. Label Tag</h2>
+  <label for="username">Name:</label>
+  <input type="text" id="username">
+
+  <hr>
+
+
+  <!-- ===================================================== -->
+  <!--                     TEXTAREA                          -->
+  <!-- ===================================================== -->
+
+  <!-- 
+  <textarea> is used for long text (messages, comments)
+
+  rows:
+  • Controls height (number of lines)
+
+  cols:
+  • Controls width (characters per line)
+
+  Example:
+  rows="4" → 4 lines tall
+  cols="40" → 40 characters wide
+  -->
+
+  <h2>4. Textarea</h2>
+  <textarea rows="4" cols="40" placeholder="Write your message here"></textarea>
+
+  <hr>
+
+
+  <!-- ===================================================== -->
+  <!--               CHECKBOX & RADIO BUTTONS                -->
+  <!-- ===================================================== -->
+
+  <h2>5. Checkbox & Radio</h2>
+
+  <!-- CHECKBOX -->
+  <!-- 
+  Checkbox:
+  • Used for multiple selections
+  Example: hobbies, skills
+  -->
+
+  <h3>Checkbox Example</h3>
+  <label for="html">HTML</label>
+  <input type="checkbox" id="html">
+
+  <label for="css">CSS</label>
+  <input type="checkbox" id="css">
+
+  <label for="">js</label>
+  <input type="checkbox">
+
+  <br><br>
+
+
+  <!-- RADIO BUTTONS -->
+  <!-- 
+  Radio Buttons:
+  • Only ONE option can be selected
+  • All radio buttons must have SAME "name"
+
+  name:
+  • Groups radio buttons together
+  Example: name="gender"
+
+  value:
+  • The actual value sent to the server when selected
+  Example: value="male" or value="female"
+
+  Final data sent:
+  gender=male
+  or
+  gender=female
+  -->
+
+  <h3>Radio Button Example</h3>
+  <p>select your gender</p>
+  <input type="radio" name="gender" value="web"> web developement full course
+  <input type="radio" name="gender" value="js"> javascript only
+
+  <hr>
+
+
+  <!-- ===================================================== -->
+  <!--                 SELECT DROPDOWN                       -->
+  <!-- ===================================================== -->
+
+  <h2>6. Select Dropdown</h2>
+
+  <!-- 
+  <select> → creates dropdown menu
+  <option> → each choice inside list
+  -->
+
+  <select>
+    <option>Select your city</option>
+    <option>Peshawar</option>
+    <option>Lahore</option>
+    <option>Karachi</option>
+  </select>
+
+  <hr>
+
+
+  <!-- ===================================================== -->
+  <!--              SUBMIT & RESET BUTTONS                   -->
+  <!-- ===================================================== -->
+
+  <!-- 
+  Submit button:
+  • Sends data to server
+
+  Reset button:
+  • Clears all input fields
+  -->
+
+  <h2>7. Submit & Reset Buttons</h2>
+  <input type="submit" value="Submit Form">
+  <input type="reset" value="Reset Form">
+
+  <hr>
+
+
+  <!-- ===================================================== -->
+  <!--           BASIC VALIDATION ATTRIBUTES                 -->
+  <!-- ===================================================== -->
+
+  <!-- 
+  required:
+  • User must fill this input (cannot submit empty)
+
+  min / max:
+  • Number must stay between given limits
+
+  maxlength:
+  • Limits text length
+  -->
+
+  <h2>8. Basic Validation</h2>
+
+  <input type="text" required placeholder="Required field">
+
+  <br><br>
+
+  <input type="number" min="1" max="10" placeholder="Number 1 to 10">
+
+  <br><br>
+
+  <input type="text" maxlength="11" placeholder="Max 5 characters">
+
+  <hr>
+
+
+  <!-- ===================================================== -->
+  <!--        COMPLETE PRACTICAL FORM (WITH COMMENTS)        -->
+  <!-- ===================================================== -->
+
+  <h2>Complete Practical Form</h2>
+
+  <form action="#" method="post">
+
+    <!-- Name field -->
+    <label>Name:</label>
+    <input type="text" id="name" required>
+
+    <br><br>
+
+    <!-- Email field -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <br><br>
+
+    <!-- Message field -->
+    <label for="msg">Message:</label>
+    <textarea id="msg" rows="2"></textarea>
+
+    <br><br>
+
+    <!-- Dropdown -->
+    <label>Select Course:</label>
+    <select>
+      <option>Web Designing</option>
+      <option>Graphic Designing</option>
+    </select>
+
+    <br><br>
+
+    <!-- Checkboxes -->
+    <label>Hobbies:</label>
+    <input type="checkbox"> Reading
+    <input type="checkbox"> Coding
+
+    <br><br>
+
+    <!-- limit for age -->
+    <input type="number" min="1" max="150" placeholder="Age" width="200">
+
+    <br><br>
+
+    <!-- Submit + Reset -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+  </form>
+
+</body>
+
+</html>

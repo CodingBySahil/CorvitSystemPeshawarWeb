@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning in CSS</title>
+
+    <!--
+    ============================
+        CSS POSITION EXPLAINED
+    ============================
+
+    position: static
+    - Default position
+    - Elements appear in natural document flow
+    - top/left does NOT work
+
+    position: relative
+    - Moves element from its normal place
+    - Leaves empty space behind
+    - top/left/right/bottom works
+
+    position: absolute
+    - Removed from normal flow
+    - Positioned inside nearest parent with position (relative/absolute)
+
+    position: fixed
+    - Stays in place even when scrolling
+    - Example: navbar, back-to-top button
+
+    position: sticky
+    - Acts like relative + fixed
+    - Sticks when scroll reaches a point
+    -->
+
+    <style>
+        /* STATIC */
+        .static-box {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        /* RELATIVE */
+        .relative-box {
+            border: 2px solid blue;
+            padding: 10px;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+
+        /* ABSOLUTE */
+        .parent-box {
+            border: 2px solid green;
+            height: 150px;
+            position: relative;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: lightgreen;
+            padding: 10px;
+        }
+
+        /* FIXED */
+        .fixed-box {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: orange;
+            padding: 10px;
+        }
+
+        /* STICKY */
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background: yellow;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Positioning</h1>
+
+    <h2>Static Position</h2>
+    <div class="static-box">Static → default behavior</div>
+
+    <h2>Relative Position</h2>
+    <div class="relative-box">Relative → moved 20px down, 30px right</div>
+
+    <h2>Absolute Position</h2>
+    <div class="parent-box">
+        Parent Box
+        <div class="absolute-box">Absolute inside parent</div>
+    </div>
+
+    <h2>Fixed Position</h2>
+    <div class="fixed-box">Fixed → always visible</div>
+
+    <h2>Sticky Position</h2>
+    <div class="sticky-box">Sticky → sticks at top on scroll</div>
+
+    <p>Scroll down to test sticky effect.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+</body>
+
+</html>

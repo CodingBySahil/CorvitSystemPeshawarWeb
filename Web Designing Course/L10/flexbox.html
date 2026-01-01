@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 10 – Layouts & Flexbox</title>
+
+    <!--
+    ============================================================
+                CLASS 10: LAYOUTS & FLEXBOX (DETAILED)
+    ============================================================
+
+    🔵 WHAT IS MODERN LAYOUT?
+    --------------------------
+    - Modern websites need proper structure.
+    - Old layout methods: tables, float-based layout (very difficult)
+    - Modern layout: Flexbox & Grid (very easy, responsive, clean)
+
+    Flexbox helps us:
+    ✔ Align items easily
+    ✔ Create navigation bars
+    ✔ Make responsive rows/columns
+    ✔ Center anything perfectly
+
+    ------------------------------------------------------------
+
+    🔵 FLEXBOX CONTAINER & ITEMS
+    -----------------------------
+    display: flex
+    - Turns a box into flex container
+    - Its children become flex items
+
+    ------------------------------------------------------------
+
+    🔵 IMPORTANT FLEXBOX PROPERTIES
+    -------------------------------
+
+    1) flex-direction
+       - row (default)
+       - row-reverse
+       - column
+       - column-reverse
+       → Controls direction of items
+
+    2) justify-content  (x-axis)
+       - flex-start
+       - center
+       - flex-end
+       - space-between
+       - space-around
+       - space-evenly
+       → Positions items horizontally
+
+    3) align-items  (y-axis)
+       - flex-start
+       - center
+       - flex-end
+       - stretch
+       → Controls vertical alignment
+
+    4) gap
+       - Adds space between flex items
+       → Better than margin!
+
+    ------------------------------------------------------------
+
+    🔵 MINI PROJECT: NAVIGATION BAR
+    --------------------------------
+    - Create a modern nav using flexbox
+    - Items will auto arrange neatly
+    - Very useful in real websites
+    ============================================================
+    -->
+
+    <style>
+        /* BASIC BOX STYLING FOR DEMO */
+        .box {
+            background: lightblue;
+            padding: 20px;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        /* FLEX CONTAINER */
+        .flex-container {
+            /* This makes the box a flexbox */
+            display: flex;
+            background: #f3f3f3;
+            padding: 20px;
+            border: 2px solid #222;
+            gap: 15px;
+        }
+
+        /* DEMO ITEMS */
+        .item {
+            background: lightcoral;
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* ROW, COLUMN EXAMPLES */
+        .row {
+            flex-direction: row;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        /* JUSTIFY CONTENT EXAMPLES */
+        .jc-center {
+            justify-content: center;
+        }
+
+        .jc-space-between {
+            justify-content: space-between;
+        }
+
+        /* ALIGN ITEMS */
+        .ai-center {
+            align-items: center;
+            height: 150px;
+            /* to show vertical alignment clearly */
+        }
+
+        /* NAVBAR MINI PROJECT */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            /* left and right */
+            align-items: center;
+            /* vertically center */
+            padding: 15px 20px;
+            background: #222;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Class 10: Layouts & Flexbox</h1>
+
+    <!-- FLEX DIRECTION -->
+    <h2>Flex Direction</h2>
+    <div class="flex-container row">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <div class="flex-container column">
+        <div class="item">Column 1</div>
+        <div class="item">Column 2</div>
+        <div class="item">Column 3</div>
+    </div>
+
+    <!-- JUSTIFY CONTENT -->
+    <h2>Justify Content (Horizontal Alignment)</h2>
+    <div class="flex-container jc-center">
+        <div class="item">Center</div>
+        <div class="item">Center</div>
+    </div>
+
+    <div class="flex-container jc-space-between">
+        <div class="item">Left</div>
+        <div class="item">Right</div>
+    </div>
+
+    <!-- ALIGN ITEMS -->
+    <h2>Align Items (Vertical Alignment)</h2>
+    <div class="flex-container ai-center">
+        <div class="item">Aligned Center</div>
+        <div class="item">Aligned Center</div>
+    </div>
+
+    <!-- MINI PROJECT: NAVIGATION BAR -->
+    <h2>Mini Project: Navigation Bar</h2>
+    <div class="navbar">
+        <div class="logo">MyWebsite</div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

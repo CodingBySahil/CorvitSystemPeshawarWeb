@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student HTML & CSS Assignment</title>
+
+    <style>
+        /* GENERAL PAGE */
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f3f3f3;
+        }
+
+        /* HEADER AREA */
+        .header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* SECTION BOXES */
+        .section {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        /* SIMPLE CARD BOXES */
+        .box {
+            background-color: #efefef;
+            border: 1px solid #bbb;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* FORM STYLING */
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 16px;
+            border: 1px solid black;
+            background-color: #ddd;
+        }
+
+        /* IMAGE */
+        img {
+            width: 100%;
+            border: 1px solid #aaa;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>HTML & CSS Basic Assignment</h1>
+        <p>This page is built using only the topics we studied in Week 1 & Week 2.</p>
+    </div>
+
+    <!-- SECTION 1: INTRO -->
+    <div class="section">
+        <h2>What We Learned</h2>
+
+        <div class="box">
+            <h3>HTML Basics</h3>
+            <p>We covered headings, paragraphs, images, links, lists, tables and basic form elements.</p>
+        </div>
+
+        <div class="box">
+            <h3>CSS Basics</h3>
+            <p>We practiced colors, background colors, borders, margins, padding and box model.</p>
+        </div>
+    </div>
+
+    <!-- SECTION 2: LISTS AND TABLE -->
+    <div class="section">
+        <h2>Topics List</h2>
+
+        <ul>
+            <li>HTML Structure</li>
+            <li>Paragraphs</li>
+            <li>Images</li>
+            <li>Tables</li>
+            <li>Forms</li>
+            <li>Basic CSS</li>
+        </ul>
+
+        <h3>Simple Table</h3>
+
+        <table border="1" width="100%">
+            <tr>
+                <th>Subject</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>HTML</td>
+                <td>Completed</td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>In Progress</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- SECTION 3: IMAGE + DESCRIPTION LIST -->
+    <div class="section">
+        <h2>Image & Description</h2>
+
+        <img style="width: 500px;" src="img.png" alt="Sample">
+
+        <dl>
+            <dt>HTML</dt>
+            <dd>The structure of a webpage.</dd>
+
+            <dt>CSS</dt>
+            <dd>The styling and design of a webpage.</dd>
+        </dl>
+    </div>
+
+    <!-- SECTION 4: CONTACT FORM -->
+    <div class="section">
+        <h2>Contact Form</h2>
+
+        <form>
+
+            <label>Your Name</label>
+            <input type="text">
+
+            <label>Email</label>
+            <input type="email">
+
+            <label>Choose Topic</label>
+            <select>
+                <option>HTML</option>
+                <option>CSS</option>
+            </select>
+
+            <label>Your Message</label>
+            <textarea rows="4"></textarea>
+
+            <p>Select Level:</p>
+            <input type="radio" name="lvl" checked> Beginner
+            <input type="radio" name="lvl"> Intermediate
+
+            <br><br>
+
+            <input type="checkbox"> Subscribe to updates
+
+            <br><br>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

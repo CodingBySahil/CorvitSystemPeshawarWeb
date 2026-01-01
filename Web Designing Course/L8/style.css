@@ -1,0 +1,144 @@
+/* using import */
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;1,700&display=swap");
+
+/* ===========================================================
+            FONT FAMILY, SIZE, STYLE, WEIGHT EXAMPLES
+           =========================================================== */
+
+.font-example {
+  /* WHY font-family?
+               - Changes the look & feel of text.
+               - Here we use "Poppins", a modern clean font.
+            */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Bitcount Prop Single";
+
+  /* WHY font-size?
+               - To control text size.
+               - 20px is easy to read for demonstration.
+            */
+  font-size: 20px;
+
+  /* WHY italic?
+               - Used for emphasis like quotes or special lines.
+            */
+  font-style: italic;
+
+  /* WHY weight 600?
+               - 600 = semi-bold, good for titles or highlighted text.
+            */
+  font-weight: 600;
+
+  background: #fff1f0a2;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.font-stack {
+  /* Multiple fonts for fallback.
+               WHY?
+               - If first font not available, browser uses second.
+               - This keeps design safe on all devices.
+            */
+  font-family: "Roboto", Arial, sans-serif;
+
+  font-size: 18px;
+  background-color: #fdf2df;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* ===========================================================
+            COLOR SYSTEMS
+          =========================================================== */
+
+.hex-color {
+  /* WHY HEX?
+               - Most common system for web design.
+               - Short, clean, widely used by designers.
+            */
+  color: #ff5733;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.rgb-color {
+  /* WHY RGB?
+               - Helps when using rgba() for transparency.
+               - Easy to understand for beginners (0–255).
+            */
+  color: rgb(0, 128, 255);
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.hsl-color {
+  /* WHY HSL?
+               - Best for adjusting shade & brightness.
+               - Designers use this for theme creation.
+            */
+  color: hsl(120, 60%, 30%);
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* ===========================================================
+            LINE-HEIGHT & LETTER-SPACING
+          =========================================================== */
+
+.spacing-example {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+
+  /* WHY line-height 1.8?
+               - Gives breathing space between lines.
+               - Makes long text easy to read.
+            */
+  line-height: 1.8;
+
+  /* WHY letter-spacing?
+               - Adds space between letters.
+               - Looks good in headings or stylish text.
+            */
+  letter-spacing: 2px;
+
+  background: #e9ffe7;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* ===========================================================
+            TEXT SHADOW
+          =========================================================== */
+
+.shadow-example {
+  font-size: 30px;
+
+  /* WHY text-shadow?
+               - Creates glow/3D effect.
+               - Good for banners & hero sections.
+               - Format: x-offset, y-offset, blur, color
+            */
+  text-shadow: 2px 2px 5px gray;
+
+  background: #fff3cd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* ===========================================================
+            RESPONSIVE TEXT
+          =========================================================== */
+
+.responsive-text {
+  /* WHY vw?
+               - vw = viewport width
+               - Text grows/shrinks based on screen size.
+               - Perfect for responsive headings.
+            */
+  font-size: 4vw;
+
+  font-family: "Poppins", sans-serif;
+  background: #e0f7fa;
+  padding: 20px;
+}

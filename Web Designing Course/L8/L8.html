@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Class 8 - Typography & Colors</title>
+
+   <!--
+  =====================================
+        CLASS 8: TYPOGRAPHY & COLORS 
+  =====================================
+
+  TYPOGRAPHY: (Styling the text)
+  --------------------------------
+  Why important?
+  - Makes website readable and beautiful.
+  - Good typography improves user experience.
+  - Every professional website uses proper fonts, sizes, and spacing.
+
+  1) font-family
+     → This chooses which font style you want.
+     → Example: Arial, Poppins, Roboto, Times New Roman.
+     WHY use it?
+     - To make text look modern or classic.
+     - To give your website a unique style.
+
+  2) font-size
+     → Controls how big or small the text appears.
+     Units:
+       px  → fixed size
+       rem → responsive based on root font
+       em  → responsive based on parent font
+     WHY use it?
+     - To maintain clean hierarchy (Headings bigger → Text smaller)
+
+  3) font-style
+     → normal or italic
+     WHY use it?
+     - To highlight quotes, important lines, or emphasis.
+
+  4) font-weight
+     → Thickness of text (100 to 900)
+     WHY?
+     - To highlight headings (bold)
+     - To tone down subtitles (light)
+
+  GOOGLE FONTS
+  ----------------
+  WHY?
+  - Free fonts by Google.
+  - Easy to use.
+  - Makes website look professional.
+  HOW?
+  - Add <link> in <head>.
+  - Then use the font in CSS.
+
+  COLOR SYSTEMS
+  ----------------
+  Why 3 systems?
+  Because every designer uses different needs:
+
+  1) HEX → #ff0000
+     - Used mostly in web design.
+
+  2) RGB → rgb(255,0,0)
+     - Good when you need transparency with rgba().
+
+  3) HSL → hsl(0,100%,50%)
+     - Best for adjusting brightness and saturation.
+
+  SPACING
+  ---------
+  1) line-height
+     → Space between lines of text.
+     WHY?
+     - Makes paragraphs readable.
+
+  2) letter-spacing
+     → Space between letters.
+     WHY?
+     - Used in headings or stylish text.
+
+  TEXT SHADOW
+  ---------------
+  WHY?
+  - Creates 3D effect or highlight text.
+  - Good for banners or hero sections.
+
+  RESPONSIVE TEXT
+  -------------------
+  WHY?
+  - On small screens big text becomes too large.
+  - On large screens small text becomes too tiny.
+  Solution → Use rem, em, or vw.
+
+  vw → based on screen width → perfect for big headings.
+  ======================================================================
+  -->
+
+   <!-- Importing Google Fonts -->
+   <!-- WHY?
+         - To use modern fonts on your website.
+         - This link loads "Poppins" and "Roboto" fonts.
+    -->
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet">
+
+   <link rel="stylesheet" href="style.css">
+
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&display=swap');
+   </style>
+
+</head>
+
+<body style="width: 1000px; font-size: 80px;">
+   <!-- <div style="width: 300px; background-color: red; color: yellow; font-size: 20px;"> -->
+
+   <h1 style="font-size: 1vw;">Class 8: Typography & Colors</h1>
+   <!-- </div> -->
+
+   <h2>Typography Examples</h2>
+   <div class="font-example">
+      This text uses: Poppins font, italic style, and semi-bold weight.
+   </div>
+
+   <div class="font-stack">
+      This text uses: Roboto with fallback fonts (Arial, sans-serif).
+   </div>
+
+   <h2>Color Systems</h2>
+   <div class="hex-color">HEX Color → #ff5733</div>
+   <div class="rgb-color">RGB Color → rgb(0, 128, 255)</div>
+   <div class="hsl-color">HSL Color → hsl(120, 60%, 30%)</div>
+
+   <h2>Line Height & Letter Spacing</h2>
+   <div class="spacing-example">
+      This example shows extra space between lines and letters.
+   </div>
+
+   <h2>Text Shadow</h2>
+   <div class="shadow-example">
+      Text Shadow Example
+   </div>
+
+   <h2>Responsive Text</h2>
+   <div class="responsive-text">
+      Resize the browser window and watch me change size!
+   </div>
+
+</body>
+
+</html>

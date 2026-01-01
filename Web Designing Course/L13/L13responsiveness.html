@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 13-15 Responsive Design Project</title>
+
+    <!--
+    ============================================================
+        CLASS 13: RESPONSIVE WEB DESIGN (RWD)
+    ============================================================
+
+    WHAT IS RESPONSIVE DESIGN?
+    --------------------------
+    Responsive design means:
+    - Website layout changes according to screen size
+    - Same website works on:
+        1. Mobile
+        2. Tablet
+        3. Laptop
+        4. Desktop
+
+    Without responsive design:
+    - Website looks broken on mobile
+    - Text too small or too large
+    - User experience is bad
+
+    With responsive design:
+    - Content adjusts automatically
+    - Better user experience
+    - Required in real-world websites
+
+    ------------------------------------------------------------
+
+    MEDIA QUERIES
+    -------------
+    Media queries allow us to apply CSS only on specific screen sizes.
+
+    Example logic:
+    If screen width is less than 768px
+    then change layout
+
+    Syntax:
+    @media (max-width: 768px) {
+        CSS rules here
+    }
+
+    ------------------------------------------------------------
+
+    MOBILE-FIRST APPROACH
+    ---------------------
+    Rule:
+    - First design for mobile
+    - Then enhance for larger screens
+
+    Why?
+    - Most users use mobile
+    - Easier to scale up than down
+
+    ------------------------------------------------------------
+
+    BREAKPOINTS
+    -----------
+    Breakpoints are screen widths where layout changes.
+
+    Common breakpoints:
+    1. Mobile: 0 to 600px
+    2. Tablet: 601px to 900px
+    3. Desktop: 901px and above
+
+    ------------------------------------------------------------
+
+    FLEXIBLE UNITS
+    --------------
+    Percent (%)  -> relative to parent
+    vh           -> viewport height
+    vw           -> viewport width
+    rem          -> root font size
+    em           -> parent font size
+
+    These units help make layout flexible.
+
+    ============================================================
+    CLASS 14: CSS BEST PRACTICES
+    ============================================================
+
+    1. REUSABILITY
+    --------------
+    - Write CSS once
+    - Reuse classes again and again
+    - Avoid repeating styles
+
+    2. CLASS NAMING
+    ---------------
+    - Use meaningful names
+    - Avoid random names like a1, box123
+
+    3. BEM METHODOLOGY (INTRO)
+    -------------------------
+    BEM = Block Element Modifier
+
+    Example:
+    block: header
+    element: header__logo
+    modifier: header--dark
+
+    This makes CSS readable and scalable.
+
+    4. FILE STRUCTURE (IDEA)
+    ------------------------
+    index.html
+    css/style.css
+    images/
+    js/
+
+    yahan per ham intenal css zyada use karte hain ta k bar bar swap karnee k zarorat na hu
+
+    5. CLEAN CSS
+    ------------
+    - Avoid inline styles
+    - Group related styles
+    - Comment your code
+
+    ============================================================
+    CLASS 15: MINI PROJECT
+    RESPONSIVE LANDING PAGE
+    ============================================================
+    -->
+
+    <style>
+        /* ==============================
+           BASIC RESET AND BODY
+        ============================== */
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* ==============================
+           HEADER (FLEXBOX)
+        ============================== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .header__logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header__nav {
+            display: flex;
+            gap: 16px;
+        }
+
+        .header__nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ==============================
+           HERO SECTION (FLEXBOX)
+        ============================== */
+        .hero {
+            display: flex;
+            padding: 40px;
+            gap: 30px;
+            background-color: #f4f4f4;
+        }
+
+        .hero__text {
+            flex: 1;
+        }
+
+        .hero__text h1 {
+            font-size: 36px;
+        }
+
+        .hero__text p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .hero__box {
+            flex: 1;
+            background-color: #4caf50;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* ==============================
+           FEATURES SECTION (GRID)
+        ============================== */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .feature {
+            background-color: #2196f3;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* ==============================
+           FOOTER
+        ============================== */
+        .footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 16px;
+        }
+
+        /* =================================================
+           MEDIA QUERIES (RESPONSIVE DESIGN)
+        ================================================= */
+
+        /* TABLET VIEW */
+        @media (max-width: 900px) {
+
+            .hero {
+                flex-direction: column;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* MOBILE VIEW */
+        @media (max-width: 600px) {
+
+            .header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .header__nav {
+                flex-direction: column;
+            }
+
+            .hero__text h1 {
+                font-size: 28px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    ============================== -->
+    <div class="header">
+        <div class="header__logo">MyWebsite</div>
+
+        <div class="header__nav">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <!-- ==============================
+         HERO SECTION
+    ============================== -->
+    <div class="hero">
+        <div class="hero__text">
+            <h1>Learn Web Development</h1>
+            <p>
+                This landing page changes its layout based on screen size.
+                Resize the browser window to see how Flexbox, Grid and Media
+                Queries work together.
+            </p>
+        </div>
+
+        <div class="hero__box">
+            HERO BOX
+        </div>
+    </div>
+
+    <!-- ==============================
+         FEATURES SECTION
+    ============================== -->
+    <div class="features">
+        <div class="feature">Responsive Layout</div>
+        <div class="feature">Flexbox Used</div>
+        <div class="feature">Grid Used</div>
+        <div class="feature">Media Queries</div>
+        <div class="feature">Clean CSS</div>
+        <div class="feature">Best Practices</div>
+    </div>
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+    <div class="footer">
+        Responsive Landing Page Project - Class 15
+    </div>
+
+</body>
+
+</html>

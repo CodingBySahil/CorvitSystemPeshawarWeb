@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L12 class practice</title>
+    <style>
+        .parent {
+            width: 340px;
+            height: 340px;
+            background-color: lightblue;
+            margin-left: auto;
+            margin-right: auto;
+            /* height: 80vh; */
+            border-radius: 14px 40px;
+        }
+
+        .child {
+            width: 40px;
+            height: 40px;
+            background-color: coral;
+            text-align: center;
+            align-content: center;
+            padding: 8px 16px;
+            border-radius: 8px;
+            /* transform: skew(5deg, 3deg);
+            scale: 1.20; */
+            /* translate: 0px; */
+            animation-name: move-to-corners;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        .child:hover {
+            transition: back;
+            transition-duration: 2s;
+            background-color: red;
+            scale: 2;
+        }
+
+
+
+
+
+        @keyframes move-to-corners {
+            0% {
+                translate: 0px;
+                scale: 1;
+            }
+
+            25% {
+                translate: 270px;
+                scale: 1.5;
+            }
+
+            50% {
+                translate: 270px 285px;
+                scale: 1;
+            }
+
+            75% {
+                translate: 0px 285px;
+                scale: 0.3;
+            }
+
+            100% {
+                translate: 0px;
+                scale: 3;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">Child</div>
+    </div>
+</body>
+
+</html>

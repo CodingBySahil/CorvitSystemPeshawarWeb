@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS Assignment - Class 6</title>
+
+    <!-- BONUS: External CSS File -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- =========================================================
+         INTERNAL CSS
+         ========================================================= -->
+    <style>
+
+        /* Element Selector (applies to all h2 tags) */
+        h2 {
+            color: darkgreen;
+            background-color: lightyellow;
+        }
+
+        /* Class selector for multiple boxes */
+        .box {
+            width: 250px;
+            height: 80px;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: lightblue;
+        }
+
+        /* Another class selector (different styling) */
+        .highlight {
+            background-color: pink;
+            color: blue;
+        }
+
+        /* ID Selector (must be unique) */
+        #specialNote {
+            color: white;
+            background-color: purple;
+            font-weight: bold;
+            width: 300px;
+            padding: 10px;
+        }
+
+        /* Element selector — paragraph default color */
+        p {
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 style="color: darkred;">Advanced CSS Assignment</h1>
+
+    <!-- INLINE CSS WITH CONFLICTING STYLES -->
+    <p style="color: red; background-color: aqua; font-size: 22px;">
+        This paragraph uses Inline CSS (it overwrites internal p{} color).
+    </p>
+
+    <hr>
+
+    <h2>Task: Apply Multiple CSS Concepts</h2>
+
+    <!-- USING CLASS SELECTOR -->
+    <div class="box">
+        This box uses CLASS selector (.box)
+    </div>
+
+    <br>
+
+    <!-- USING TWO CLASSES TOGETHER (TRICKY) -->
+    <div class="box highlight">
+        This box uses TWO classes (.box + .highlight)
+    </div>
+
+    <br>
+
+    <!-- USING ID SELECTOR -->
+    <p id="specialNote">
+        This paragraph uses an ID selector. ID overwrites class & element selectors.
+    </p>
+
+    <br>
+
+    <!-- INLINE + ELEMENT SELECTOR CONFLICT -->
+    <p style="color: green;">
+        This paragraph looks green because Inline CSS overwrites p{ color: brown }.
+    </p>
+
+    <hr>
+
+    <!-- TRICKY WIDTH & HEIGHT CHALLENGE -->
+    <div style="background-color: lightcoral; width: 150px; height: 150px;">
+        Inline CSS box with fixed size.
+    </div>
+
+    <br>
+
+    <!-- ELEMENT SELECTOR APPLIES HERE -->
+    <p>This paragraph is styled with the element selector (p { color: brown; })</p>
+
+</body>
+</html>

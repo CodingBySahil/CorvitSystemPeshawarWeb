@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 6 - Introduction to CSS</title>
+
+    <!-- ---------------------------
+        GENERAL EXPLANATIONS
+        --------------------------- -->
+
+    <!--
+        WHAT IS CSS?
+        CSS stands for Cascading Style Sheets.
+        We use CSS to style our HTML page: colors, sizes, backgrounds,
+        layout, spacing, fonts, etc.
+    -->
+
+    <!--
+        TYPES OF CSS
+        1) Inline CSS
+           - Written inside the HTML tag using "style" attribute.
+           - Example: <p style="color:red;">Hello</p>
+
+        2) Internal CSS
+           - Written inside <style> tag inside <head>.
+           - Used when styling for a single HTML file.
+
+        3) External CSS
+           - Written in a separate .css file.
+           - Linked using <link rel="stylesheet" href="folderName/style.css">
+           - Best method for big websites.
+    -->
+
+    <!--
+        SELECTORS
+        Selectors tell CSS "which HTML element to style".
+
+        1) Element Selector:
+            p { color: blue; }
+            (This selects all <p> tags)
+
+        2) Class Selector:
+            .box { background-color: yellow; }
+            (Class starts with a dot . )
+            We apply class using:
+            <div class="box"></div>
+
+        3) ID Selector:
+            #title { color: green; }
+            (ID starts with a # )
+            We apply id using:
+            <h1 id="title">Hello</h1>
+
+        Remember:
+        - Class can be used MULTIPLE TIMES.
+        - ID must be UNIQUE (only once in page).
+    -->
+
+    <!--
+        CSS COMMENTS
+        CSS comments are written like this:
+        /* This is a CSS comment */
+
+        Comments help explain code for students or developers.
+    -->
+
+    <!--
+        BASIC CSS PROPERTIES
+        color: sets text color
+        background-color: sets background color
+        width: sets width of an element
+        height: sets height of an element
+    -->
+
+    <!-- ----------------------------
+        INTERNAL CSS STARTS BELOW 
+        ---------------------------- -->
+    <style>
+        /* Styling the heading using element selector */
+        h1 {
+            color: darkblue;
+        }
+
+        /* Styling a class */
+        .myClassBox {
+            background-color: lightyellow;
+            width: 250px;
+            height: 80px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        /* Styling an ID */
+        #myUniqueID {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Example paragraph styling */
+        p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Class 6: Introduction to CSS</h1>
+
+    <!-- ----------------------------------------------------------------
+        INLINE CSS EXAMPLE
+        Explanation:
+        Using the "style" attribute directly inside the HTML tag.
+    ---------------------------------------------------------------- -->
+    <p style="color: red;">This is an example of Inline CSS (text is purple).</p>
+
+    <!-- ----------------------------------------------------------------
+        CLASS SELECTOR EXAMPLE
+        Explanation:
+        - class="myClassBox"
+        - Class selector in CSS starts with a dot: .myClassBox
+    ---------------------------------------------------------------- -->
+    <div class="myClassBox">
+        This box is styled using CLASS selector.
+    </div>
+
+    <br>
+
+    <!-- ----------------------------------------------------------------
+        ID SELECTOR EXAMPLE
+        Explanation:
+        - id="myUniqueID"
+        - ID selector in CSS starts with #: #myUniqueID
+    ---------------------------------------------------------------- -->
+    <p id="myUniqueID">This paragraph is styled using ID selector.</p>
+
+    <br>
+    <hr><br>
+
+    <!-- ----------------------------------------------------------------
+        BASIC CSS PROPERTIES EXAMPLE
+    ---------------------------------------------------------------- -->
+    <h2>Basic Styling Examples</h2>
+
+    <p>Color (text color) Example:</p>
+    <p style="color: darkred; background-color: aqua; font-size: 45px;">This text is dark red using Inline CSS.</p>
+
+    <p>Background Color Example:</p>
+    <div style="background-color: lightblue; padding: 10px;">
+        This box has a light blue background.
+    </div>
+
+    <br>
+
+    <p>Width & Height Example:</p>
+    <div style="background-color: pink; width: 200px; height: 60px;">
+        Box with fixed size.
+    </div>
+
+    <br><br>
+
+    <!-- -------------
+        EXTERNAL CSS
+    ------------------ -->
+
+    <!--
+        EXTERNAL CSS FILE EXPLANATION:
+
+        We create a separate file:
+
+        ---- style.css ----
+        body {
+            background-color: lightgray;
+        }
+        --------------------
+
+        And we connect it like this inside <head>:
+
+        <link rel="stylesheet" href="style.css">
+
+        This is the most professional way of writing CSS.
+    -->
+
+</body>
+
+</html>

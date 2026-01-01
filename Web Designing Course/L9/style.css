@@ -1,0 +1,121 @@
+/* ============================================================
+            EXAMPLES OF POSITIONING
+        ============================================================ */
+
+/* static → default */
+.static-box {
+  width: 200px;
+  height: 50px;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+  /* No top/left works here */
+}
+
+/* relative → move relative to normal place */
+.relative-box {
+  position: relative;
+  top: 20px;
+  /* moves down 20px */
+  left: 30px;
+  /* moves right 30px */
+  width: 200px;
+  height: 50px;
+  background-color: #d0f0fd;
+  margin-bottom: 20px;
+}
+
+/* absolute → remove from flow, place anywhere in parent */
+.parent-box {
+  position: relative;
+  /* necessary for absolute inside it */
+  width: 300px;
+  height: 150px;
+  background-color: #fdf2df;
+  margin-bottom: 30px;
+  border: 2px solid #333;
+}
+
+.absolute-box {
+  position: absolute;
+  top: 20px;
+  /* distance from parent top */
+  right: 20px;
+  /* distance from parent right */
+  width: 100px;
+  height: 50px;
+  background-color: #ffb3b3;
+}
+
+/* fixed → sticks to viewport */
+.fixed-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #d0fdd0;
+  padding: 10px;
+  border: 1px solid #333;
+}
+
+/* sticky → sticks after scrolling to threshold */
+.sticky-box {
+  position: sticky;
+  top: 0;
+  /* start sticking at top */
+  background-color: #fff3cd;
+  padding: 10px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+/* ============================================================
+            Z-INDEX EXAMPLE
+        ============================================================ */
+.z-box1 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #ff9999;
+  z-index: 1;
+  /* behind z-box2 */
+  display: inline-block;
+  margin-right: -50px;
+}
+
+.z-box2 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #99ccff;
+  z-index: 2;
+  /* on top */
+  display: inline-block;
+}
+
+/* ============================================================
+            FLOAT & CLEAR EXAMPLE
+        ============================================================ */
+.float-left {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: #ffeb99;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.float-right {
+  float: right;
+  width: 100px;
+  height: 100px;
+  background-color: #b3ffd9;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* clear fixes next element */
+.clear-both {
+  clear: both;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 20px;
+}

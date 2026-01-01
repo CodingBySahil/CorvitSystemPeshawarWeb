@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 - Positioning & Floats</title>
+
+    <!--
+  ============================================================
+        CLASS 9: POSITIONING & FLOATS (DETAILED EXPLANATION)
+  ============================================================
+
+  WHY POSITIONING IS IMPORTANT?
+  - Helps us control where elements appear on the page.
+  - Without positioning, everything flows naturally (default behavior).
+  - To create complex layouts, menus, banners, tooltips, etc., positioning is necessary.
+
+  POSITION PROPERTY:
+  -------------------
+  1) static → default position, normal flow
+     - Elements appear in order as in HTML.
+     - Cannot move with top/left/right/bottom.
+
+  2) relative → move element relative to its normal position
+     - Keeps space in original place
+     - Use top, left, right, bottom to nudge element.
+
+  3) absolute → positioned relative to nearest positioned ancestor
+     - Removes element from normal flow.
+     - Use top, left, right, bottom to place anywhere inside parent.
+
+  4) fixed → sticks element relative to viewport
+     - Always visible on screen even when scrolling
+     - Example: Sticky header or back-to-top button.
+
+  5) sticky → hybrid between relative & fixed
+     - Stays in normal flow until scroll reaches a point, then sticks.
+
+  Z-INDEX:
+  ---------
+  - Controls which element is on top of others (layering)
+  - Higher z-index = appears on top
+  - Works only on positioned elements (relative, absolute, fixed, sticky)
+
+  FLOAT & CLEAR:
+  ----------------
+  - float → pushes element to left or right, text flows around it
+  - clear → prevents elements from floating next to each other
+  - Common use: images with text, columns layout
+
+  REAL-LIFE EXAMPLES:
+  -------------------
+  1) Menu bar → fixed position
+  2) Tooltip → absolute position
+  3) Image on left with text wrapping → float
+  4) Sticky header → sticky position
+  ============================================================
+  -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Class 9: Positioning & Floats</h1>
+
+    <h2>Static Position (default)</h2>
+    <div class="static-box">
+        Static → normal flow, top/left doesn't work
+    </div>
+
+    <h2>Relative Position</h2>
+    <div class="relative-box">
+        Relative → moved 20px down, 30px right
+    </div>
+
+    <h2>Absolute Position</h2>
+    <div class="parent-box">
+        Parent box → Absolute inside moves freely
+        <div class="absolute-box">
+            Absolute → placed inside parent
+        </div>
+    </div>
+
+    <h2>Fixed Position</h2>
+    <div class="fixed-box">
+        Fixed → stays visible even when scrolling
+    </div>
+
+    <h2>Sticky Position</h2>
+    <div class="sticky-box">
+        Sticky → sticks to top after scrolling
+    </div>
+    <p>Scroll down to see sticky effect.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac tortor ut quam tempus suscipit. Lorem ipsum
+        dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac tortor ut quam tempus suscipit. Lorem ipsum
+        dolor sit amet.</p>
+
+    <h2>Z-Index Example (Stacking)</h2>
+    <div class="z-box1"></div>
+    <div class="z-box2"></div>
+
+    <h2>Float & Clear Example</h2>
+    <div class="float-left">Float Left</div>
+    <div class="float-right">Float Right</div>
+    <p class="clear-both">
+        This paragraph clears both floats → doesn't wrap around floated boxes.
+    </p>
+
+</body>
+
+</html>

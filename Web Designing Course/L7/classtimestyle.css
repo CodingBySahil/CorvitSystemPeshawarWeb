@@ -1,0 +1,22 @@
+.newcard{
+    display: inline-block;
+    background-color: rgba(116, 230, 236, 0.307);
+    margin: 15px;
+    /* padding: 8px; */
+    padding-left: -10px;
+    /* box-sizing: border-box; */
+    width: 250px;
+    border: 2px solid red;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.newcard img{
+    width: 100%;
+    /* padding-left: 0; */
+    border-radius: 3px;
+}
+
+.newcard h5{
+    font-size: 25px;
+}

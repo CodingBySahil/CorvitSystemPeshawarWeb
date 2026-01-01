@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 11 – CSS Grid Layout </title>
+
+    <!--
+    ================================================
+                    CLASS 11: CSS GRID LAYOUT  
+    ================================================
+
+    WHY CSS GRID?
+    -------------
+     Before Grid:
+       - Developers used tables → not responsive, very confusing
+       - Then floats → hard to manage for big layouts
+       - Flexbox → great for 1D layout (only row OR column)
+
+     CSS Grid solves everything:
+       ✔ Best for 2D layout (rows + columns)
+       ✔ Super clean syntax
+       ✔ Very responsive
+       ✔ Perfect for galleries, full websites, dashboards
+
+    ======================================================================
+    PART 1: GRID CONTAINER (display: grid)
+    ======================================================================
+
+    CONCEPT:
+    --------
+    When we apply "display: grid" to a parent box:
+    - That box becomes a **Grid Container**
+    - All children inside it become **Grid Items**
+    - Browser divides the container into rows + columns
+
+    Why important?
+    ✔ Helps us design complex layouts easily
+    ✔ No need for float or manual positioning
+    ✔ Very easy to control gaps and alignment
+
+    ======================================================================
+    -->
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f3f3f3;
+        }
+
+        /* BASIC GRID CONTAINER - 3 COLUMNS */
+        .grid-3-col {
+            display: grid;
+            /* Activates grid layout */
+            grid-template-columns: repeat(3, 1fr);
+            /* 
+                repeat(3, 1fr) → create 3 equal columns
+                1fr = 1 fraction of available space
+            */
+            gap: 15px;
+            /* Space between items */
+            background: #fff;
+            padding: 20px;
+            border: 2px solid #222;
+            margin-bottom: 40px;
+        }
+
+        .item {
+            background: royalblue;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* ==================================== */
+        /* PART 2: GRID TEMPLATE COLUMNS + ROWS     */
+        /* ==================================== */
+
+        .grid-columns-rows {
+            display: grid;
+            grid-template-columns: 150px 1fr 2fr;
+            /*
+                150px → fixed column width
+                1fr   → flexible column
+                2fr   → double size of 1fr
+                Used for sidebars + content
+            */
+            grid-template-rows: 100px 150px;
+            /*
+                First row height = 100px
+                Second row height = 150px
+            */
+            gap: 15px;
+            background: #fff;
+            padding: 20px;
+            border: 2px solid #222;
+            margin-bottom: 40px;
+        }
+
+        /* =========================================================== */
+        /* PART 3: PLACING ITEMS (span rows/columns)                    */
+        /* =========================================================== */
+
+        .grid-placement {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 20px;
+            background: #fff;
+            border: 2px solid #222;
+            margin-bottom: 40px;
+        }
+
+        .span-2-col {
+            grid-column: span 2;
+            /* Covers 2 columns horizontally */
+        }
+
+        .span-2-row {
+            grid-row: span 2;
+            /* Covers 2 rows vertically */
+        }
+
+        /* =========================================================== */
+        /* PART 4: MINI PROJECT – RESPONSIVE GRID GALLERY              */
+        /* =========================================================== */
+
+        /*
+            CONCEPT:
+            --------
+            A gallery should:
+            ✔ Automatically adjust image count according to screen size
+            ✔ Use "auto-fit" or "auto-fill" to auto-create columns
+            ✔ Use minmax() to set min size & allow flexible growth
+
+            FORMULA:
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /*
+                auto-fit → Automatically fits as many columns as possible
+                minmax(200px, 1fr)
+                    min width  = 200px (never smaller)
+                    max width  = 1fr (expand fully)
+            */
+            gap: 10px;
+            background: #fff;
+            padding: 20px;
+            border: 2px solid #222;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            /* Keeps good cropping */
+            border-radius: 10px;
+            border: 2px solid #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Class 11 – CSS Grid Layout</h1>
+
+
+    <!-- ============================================================
+         PART 1: GRID CONTAINER
+         ============================================================ -->
+    <h2>1) Grid Container: display: grid</h2>
+
+    <!--
+        
+        -----------------
+        This grid has 3 equal columns.
+        Resize window → items rearrange automatically!
+    -->
+    <div class="" style="">
+        <div class="item">Box 1</div>
+        <div class="item">Box 2</div>
+        <div class="item">Box 3</div>
+        <div class="item">Box 4</div>
+        <div class="item">Box 5</div>
+        <div class="item">Box 6</div>
+    </div>
+
+
+    <!-- ============================================================
+         PART 2: GRID TEMPLATE COLUMNS & ROWS
+         ============================================================ -->
+    <h2>2) Grid Template Columns & Rows</h2>
+
+    <!--
+        CONCEPT:
+        --------
+        150px | 1fr | 2fr → Good for sidebars and layouts
+        Rows: first = 100px, second = 150px
+    -->
+    <div class="grid-columns-rows">
+        <div class="item">150px</div>
+        <div class="item">1fr</div>
+        <div class="item">2fr</div>
+        <div class="item">Row 2 A</div>
+        <div class="item">Row 2 B</div>
+        <div class="item">Row 2 C</div>
+    </div>
+
+
+    <!-- ============================================================
+         PART 3: PLACING ITEMS (span)
+         ============================================================ -->
+    <h2>3) Placing Items (span rows & columns)</h2>
+
+    <!--
+        CONCEPT:
+        --------
+        grid-column: span 2 → item covers 2 columns
+        grid-row: span 2    → item covers 2 rows
+    -->
+    <div class="grid-placement">
+        <div class="item span-2-col">Span 2 Columns</div>
+        <div class="item">Box</div>
+        <div class="item span-2-row">Span 2 Rows</div>
+        <div class="item">Box</div>
+        <div class="item">Box</div>
+        <div class="item">Box</div>
+    </div>
+
+
+    <!-- ============================================================
+         PART 4: MINI PROJECT – RESPONSIVE GRID GALLERY
+         ============================================================ -->
+    <h2>4) Mini Project – Responsive Grid Gallery</h2>
+
+    <!--
+        Resize your browser window:
+        - Images will automatically adjust
+        
+    -->
+    <div class="gallery">
+        <img src="photo.jpg" alt="">
+        <img src="photo.jpg" alt="">
+        <img src="photo.jpg" alt="">
+        <img src="photo.jpg" alt="">
+        <img src="photo.jpg" alt="">
+        <img src="photo.jpg" alt="">
+        <img src="photo.jpg" alt="">
+        <img src="photo.jpg" alt="">
+    </div>
+
+    <div class="" style="display: flex;">
+        <div class="item">Box 1</div>
+        <div class="item">Box 2</div>
+        <div class="item">Box 3</div>
+        <div class="item">Box 4</div>
+        <div class="item">Box 5</div>
+        <div class="item">Box 6</div>
+    </div>
+
+</body>
+
+</html>
