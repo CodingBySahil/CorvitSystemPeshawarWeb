@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 16 - Introduction to JavaScript</title>
+
+    <!--
+    ============================================================
+                CLASS 16: INTRODUCTION TO JAVASCRIPT
+    ============================================================
+
+    WHAT IS JAVASCRIPT?
+    -------------------
+    JavaScript (JS) is a programming language used to:
+    - Make websites interactive
+    - Respond to user actions (click, type, scroll)
+    - Change HTML and CSS dynamically
+    - Perform calculations and logic or functionality
+
+    HTML = Structure (bones)
+    CSS  = Design (clothes)
+    JS   = Brain (thinking and actions)
+
+    WITHOUT JS:
+    - Website is static (only text and images)
+
+    WITH JS:
+    - Buttons work
+    - Forms validate
+    - Data changes without page reload
+
+    ------------------------------------------------------------
+
+    WHERE IS JAVASCRIPT USED?
+    -------------------------
+    - Web browsers (frontend)
+    - Servers (Node.js backend)
+    - Mobile apps
+    - Games
+    - Desktop applications
+
+    ------------------------------------------------------------
+
+    HOW TO ADD JAVASCRIPT?
+    ----------------------
+    1) Inline JavaScript
+    2) Internal JavaScript
+    3) External JavaScript
+
+    ============================================================
+    -->
+    <style></style>
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Class 16: Introduction to JavaScript</h1>
+
+    <!-- ======================================================
+         INLINE JAVASCRIPT
+         ====================================================== -->
+
+    <!--
+    INLINE JAVASCRIPT:
+    - JS written directly inside HTML tag
+    - Not recommended for big projects
+    - Good only for small demo
+
+    EXAMPLE BELOW:
+    When button is clicked, JS runs
+    -->
+    <button onclick="prompt('enter your name')">
+        Click Me (Inline JS)
+    </button>
+
+    <!-- ======================================================
+         INTERNAL JAVASCRIPT
+         ====================================================== -->
+
+    <!--
+    INTERNAL JAVASCRIPT:
+    - JS written inside <script> tag
+    - Placed inside HTML file
+    - Mostly used for learning
+
+    The browser reads JS from top to bottom
+    -->
+
+    <h1 style="" class="" id="">content</h1>
+
+    <script>
+        // js 
+    </script>
+
+    <script>
+
+        /*
+        ========================================================
+                        JAVASCRIPT COMMENTS
+        ========================================================
+
+        1) Single line comment  -> //
+        2) Multi-line comment   -> /*  */
+
+        // Comments are ignored by the browser
+        // Used for:
+        //     - Explanation
+        //         - Notes
+        //         - Debugging
+
+
+        // This is a single line comment
+
+        /*
+        This is a multi-line comment
+        Used to explain code deeply
+        */
+
+        /*
+        ========================================================
+                        console.log()
+        ========================================================
+
+        console.log():
+        - Used to print output in browser console
+        - Helps in testing and debugging
+        - Console is developer tool
+
+        HOW TO OPEN CONSOLE:
+        - Right click -> Inspect
+        - Go to Console tab
+        */
+        let res = 2 + 2
+        console.log("The addition is : " + res);
+        console.log("This message is shown in console");
+
+        /*
+        ========================================================
+                        VARIABLES IN JAVASCRIPT
+        ========================================================
+
+        VARIABLE:
+        - A container to store data
+        - Data can be number, text, true/false, etc.
+
+        Example:
+        name = "Ali" '' 
+        age = 20
+
+        JavaScript has 3 ways to declare variables:
+        1) var   (old way)
+        2) let   (modern)
+        3) const (constant)
+        */
+
+        /*
+        --------------------
+        var
+        --------------------
+        - Old JavaScript keyword
+        - Can be redeclared
+        - Can be updated
+        - Avoid using in modern JS
+        */
+
+
+
+        // const name = "mehran";
+        // name = "faizan"
+
+        // console.log(name);
+
+        // let password = 'hello';
+
+
+
+
+
+
+
+
+        //  password = "hellow"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var city = "Peshawar";
+        console.log(city);
+
+        city = "Lahore"; // allowed
+        console.log(city);
+
+
+        /*
+        --------------------
+        let
+        --------------------
+        - Modern keyword
+        - Cannot be redeclared
+        - Can be updated
+        - Block scoped
+        */
+
+        let age = 18;
+        console.log(age);
+
+        age = 19; // allowed
+        console.log(age);
+
+        /*
+        --------------------
+        const
+        --------------------
+        - Used for constant values
+        - Cannot be redeclared
+        - Cannot be updated
+        */
+
+        const country = "Pakistan";
+        console.log(country);
+
+        // console.log(country)
+        /*
+        country = "India";  -> ERROR
+        */
+
+
+        /*
+        ========================================================
+                        DATA TYPES IN JAVASCRIPT
+        ========================================================
+
+        DATA TYPE:
+        - Type of data stored in variable
+
+        JavaScript has two main categories:
+        1) Primitive Data Types
+        2) Non-Primitive (Objects)
+
+        --------------------------------------------------------
+        PRIMITIVE DATA TYPES
+        --------------------------------------------------------
+        */
+
+        /*
+        1) Number
+        - Whole numbers and decimals
+        */
+
+        let marks = 95;
+        let price = 199.99;
+
+        console.log(marks);
+        console.log(price);
+
+        /*
+        2) String
+        - Text data
+        - Written inside quotes " " or ' '
+        */
+
+        let studentName = "Mehran";
+        let message = 'Learning JavaScript';
+
+        console.log(studentName);
+        console.log(message);
+
+        /*
+        3) Boolean
+        - true or false
+        */
+
+        let isStudent = true;
+        let isLoggedIn = false;
+
+        console.log(isStudent);
+        console.log(isLoggedIn);
+
+        /*
+        4) Undefined
+        - Variable declared but value not assigned
+        */
+
+        let result;
+        console.log(result);
+
+        /*
+        5) Null
+        - Empty value intentionally
+        */
+
+        let data = null;
+        console.log(data);
+
+        /*
+        ========================================================
+                        typeof OPERATOR
+        ========================================================
+
+        typeof:
+        - Used to check data type of variable
+        */
+
+        console.log(typeof marks);        // number
+        console.log(typeof studentName);  // string
+        console.log(typeof isStudent);    // boolean
+        console.log(typeof result);       // undefined
+        console.log(typeof data);         // object (JS bug)
+        let varName2 = null;
+        console.log(typeof "hello");
+        console.log(typeof 7);
+        console.log(typeof true);
+        console.log(typeof varName2);
+        let a = 5;
+        let b = "15";
+        let res11 = a+b;
+        // console.log("The addition is "  +res11   );
+        // console.log(`the addition is ${a + b}`);
+
+        let x = "5";
+        console.log(x === 5)
+        
+        
+    </script>
+
+</body>
+
+</html>

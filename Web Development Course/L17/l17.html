@@ -1,0 +1,181 @@
+<!--
+====================================================
+Lecture 17: JavaScript Operators & Conditions
+Topic: Arithmetic, Comparison, Logical Operators
+       if / else / else if
+====================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 17 - Operators & Conditions</title>
+</head>
+
+<body>
+
+    <!-- Main heading -->
+    <h1>JavaScript Operators & Conditions</h1>
+
+    <p>Open the browser console to see the output.</p>
+
+    <!--
+    ============================================
+    ARITHMETIC OPERATORS
+    Used for mathematical calculations
+    ============================================
+    -->
+
+    <script>
+        // Declaring two numbers
+        let num1 = 10;
+        let num2 = 3;
+
+        console.log("Arithmetic Operators");
+
+        // Addition
+        console.log("Addition:", num1 + num2);
+
+        // Subtraction
+        console.log("Subtraction:", num1 - num2);
+
+        // Multiplication
+        console.log("Multiplication:", num1 * num2);
+
+        // Division
+        console.log("Division:", num1 / num2);
+
+        // Modulus (remainder)
+        console.log("Modulus:", num1 % num2);
+    </script>
+
+    <!--
+    ============================================
+    COMPARISON OPERATORS
+    These return TRUE or FALSE
+    ============================================
+    -->
+
+    <script>
+        console.log("Comparison Operators");
+
+        let age = 18;
+
+        console.log(age == 18);   // true (value check)
+        console.log(age === "18"); // false (value + type check)
+        console.log(age != 20);   // true
+        console.log(age > 15);    // true
+        console.log(age < 30);    // true
+        console.log(age >= 18);   // true
+        console.log(age <= 17);   // false
+    </script>
+
+    <!--
+    ============================================
+    LOGICAL OPERATORS
+    Used to combine conditions
+    ============================================
+    -->
+
+    <script>
+        console.log("Logical Operators");
+
+        let hasCNIC = true;
+        let isAdult = true;
+
+        // AND operator (both must be true)
+        console.log(isAdult && hasCNIC);
+
+        // OR operator (any one true)
+        console.log(isAdult || hasCNIC);
+
+        // NOT operator (reverse result)
+        console.log(!isAdult);
+    </script>
+
+    <!--
+    ============================================
+    IF STATEMENT
+    Executes code when condition is true
+    ============================================
+    -->
+
+    <script>
+        let marks = 65;
+
+        if (marks >= 50) {
+            console.log("You are Pass");
+        }
+    </script>
+
+    <!--
+    ============================================
+    IF ELSE STATEMENT
+    Two possible outcomes
+    ============================================
+    -->
+
+    <script>
+        let temperature = 25;
+
+        if (temperature > 30) {
+            console.log("Weather is hot");
+        } else {
+            console.log("Weather is normal");
+        }
+    </script>
+
+    <!--
+    ============================================
+    ELSE IF STATEMENT
+    Multiple conditions
+    ============================================
+    -->
+
+    <script>
+        let score = 78;
+
+        if (score >= 80) {
+            console.log("Grade A");
+        } else if (score >= 60) {
+            console.log("Grade B");
+        } else {
+            console.log("Fail");
+        }
+    </script>
+
+    <!--
+    ============================================
+    PRACTICE: BASIC CALCULATOR LOGIC
+    ============================================
+    -->
+
+    <script>
+        let number1 = 20;
+        let number2 = 5;
+        let operator = "*";
+
+        if (operator === "+") {
+            console.log("Result:", number1 + number2);
+        }
+        else if (operator === "-") {
+            console.log("Result:", number1 - number2);
+        }
+        else if (operator === "*") {
+            console.log("Result:", number1 * number2);
+        }
+        else if (operator === "/") {
+            console.log("Result:", number1 / number2);
+        }
+        else {
+            console.log("Invalid operator");
+        }
+    </script>
+
+
+
+</body>
+
+</html>

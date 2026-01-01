@@ -1,0 +1,178 @@
+<!--
+====================================================
+Lecture 19: DOM Manipulation
+Topics:
+- Selecting elements
+- Changing text & styles
+- Creating & removing elements
+- Form handling
+- Simple JavaScript Project
+====================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 19 - DOM Manipulation</title>
+</head>
+
+<body>
+
+    <!-- Main Heading -->
+    <h1 id="mainHeading">DOM Manipulation in JavaScript</h1>
+
+    <!-- Paragraph -->
+    <p id="infoText">This text will be changed using JavaScript.</p>
+
+    <!-- Buttons -->
+    <button id="changeBtn">Change Text & Color</button>
+    <button id="addBtn">Add New Item</button>
+    <button id="removeBtn">Remove Last Item</button>
+
+    <br><br>
+
+    <!-- List for create & remove practice -->
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <hr>
+
+    <!--
+    ============================================
+    FORM HANDLING SECTION
+    ============================================
+    -->
+
+    <h2>Form Handling Example</h2>
+
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="formOutput"></p>
+
+    <!--
+    ============================================
+    SELECTING ELEMENTS
+    ============================================
+    -->
+
+    <script>
+        // Selecting elements using getElementById
+        let heading = document.getElementById("mainHeading");
+        let paragraph = document.getElementById("infoText");
+        let changeButton = document.getElementById("changeBtn");
+        let addButton = document.getElementById("addBtn");
+        let removeButton = document.getElementById("removeBtn");
+        let list = document.getElementById("itemList");
+
+        // Selecting elements using querySelector
+        let form = document.querySelector("#myForm");
+        let input = document.querySelector("#username");
+        let output = document.querySelector("#formOutput");
+    </script>
+
+    <!--
+    ============================================
+    CHANGING TEXT & STYLES
+    ============================================
+    -->
+
+    <script>
+        changeButton.addEventListener("click", function () {
+            paragraph.textContent = "Text has been changed using DOM!";
+            paragraph.style.color = "green";
+            paragraph.style.fontSize = "20px";
+        });
+    </script>
+
+    <!--
+    ============================================
+    CREATING NEW ELEMENTS
+    ============================================
+    -->
+
+    <script>
+        addButton.addEventListener("click", function () {
+            // Create a new list item
+            let newItem = document.createElement("li");
+
+            // Add text inside the list item
+            newItem.textContent = "New Item Added";
+
+            // Add item to the list
+            list.appendChild(newItem);
+        });
+    </script>
+
+    <!--
+    ============================================
+    REMOVING ELEMENTS
+    ============================================
+    -->
+
+    <script>
+        removeButton.addEventListener("click", function () {
+            // Remove last item if list is not empty
+            if (list.lastElementChild) {
+                list.removeChild(list.lastElementChild);
+            }
+        });
+    </script>
+
+    <!--
+    ============================================
+    FORM HANDLING USING JAVASCRIPT
+    ============================================
+    -->
+
+    <script>
+        form.addEventListener("submit", function (event) {
+            // Prevent page refresh
+            event.preventDefault();
+
+            // Get input value
+            let name = input.value;
+
+            // Display output
+            if (name === "") {
+                output.textContent = "Please enter your name!";
+                output.style.color = "red";
+            } else {
+                output.textContent = "Welcome, " + name + "!";
+                output.style.color = "blue";
+            }
+
+            // Clear input field
+            input.value = "";
+        });
+    </script>
+
+    <!--
+    ============================================
+    SIMPLE JS PROJECT (Mini To-Do Logic)
+    - Add items
+    - Remove items
+    ============================================
+    -->
+
+    <!--
+    This small project shows how DOM manipulation
+    is used in real websites like to-do apps,
+    contact lists, and dashboards.
+    -->
+
+    <!--
+    ============================================
+    END OF LECTURE 19
+    ============================================
+    -->
+
+</body>
+
+</html>

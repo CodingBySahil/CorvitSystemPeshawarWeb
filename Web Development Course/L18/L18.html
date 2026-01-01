@@ -1,0 +1,134 @@
+<!--
+====================================================
+Lecture 18: JavaScript Functions & Events
+Topics:
+- Function Declaration
+- Parameters & Return
+- DOM Events (click, mouseover, input)
+- Event Listeners
+====================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 18 - Functions & Events</title>
+</head>
+
+<body>
+
+    <!-- Main Heading -->
+    <h1 id="heading">JavaScript Functions & Events</h1>
+
+    <!-- Paragraph for text change practice -->
+    <p id="text">This text will change using JavaScript.</p>
+
+    <!-- Button for click event -->
+    <button id="btn">Click Me</button>
+
+    <br><br>
+
+    <!-- Input field for input event -->
+    <input type="text" id="nameInput" placeholder="Type your name here">
+
+    <p id="output"></p>
+
+    <!--
+    ============================================
+    FUNCTION DECLARATION
+    A function is a block of code that performs
+    a specific task and runs when called.
+    ============================================
+    -->
+
+    <script>
+        // Simple function without parameters
+        function greet() {
+            console.log("Hello Students!");
+        }
+
+        // Calling the function
+        greet();
+    </script>
+
+    <!--
+    ============================================
+    FUNCTIONS WITH PARAMETERS & RETURN
+    Parameters receive values
+    Return sends value back
+    ============================================
+    -->
+
+    <script>
+        function addNumbers(a, b) {
+            return a + b; // returning result
+        }
+
+        let result = addNumbers(5, 7);
+        console.log("Sum is:", result);
+    </script>
+
+    <!--
+    ============================================
+    DOM EVENTS
+    Events are actions performed by users
+    Examples:
+    - click
+    - mouseover
+    - input
+    ============================================
+    -->
+
+    <script>
+        // Selecting elements from HTML
+        let button = document.getElementById("btn");
+        let paragraph = document.getElementById("text");
+        let heading = document.getElementById("heading");
+        let input = document.getElementById("nameInput");
+        let output = document.getElementById("output");
+    </script>
+
+    <!--
+    ============================================
+    CLICK EVENT USING EVENT LISTENER
+    ============================================
+    -->
+
+    <script>
+        button.addEventListener("click", function () {
+            paragraph.textContent = "Text changed after button click!";
+            paragraph.style.color = "blue";
+        });
+    </script>
+
+    <!--
+    ============================================
+    MOUSEOVER EVENT
+    ============================================
+    -->
+
+    <script>
+        heading.addEventListener("mouseover", function () {
+            heading.style.color = "red";
+        });
+    </script>
+
+    <!--
+    ============================================
+    INPUT EVENT
+    Runs when user types in input field
+    ============================================
+    -->
+
+    <script>
+        input.addEventListener("input", function () {
+            output.textContent = "You typed: " + input.value;
+        });
+    </script>
+
+
+</body>
+
+</html>

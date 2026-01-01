@@ -1,0 +1,105 @@
+<!--
+====================================================
+Mini Project: Light ON / OFF
+Technologies: Pure HTML, CSS, JavaScript
+Concepts Used:
+- DOM Selection
+- Event Listener
+- Class Toggle
+- Font Awesome Icon
+====================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Light ON / OFF Project</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Page styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+        }
+
+        /* Light bulb icon */
+        .bulb {
+            font-size: 120px;
+            color: #444;
+            transition: 0.3s ease;
+        }
+
+        /* Glow effect when light is ON */
+        .bulb.on {
+            color: yellow;
+            text-shadow:
+                0 0 20px yellow,
+                0 0 40px yellow,
+                0 0 60px yellow;
+        }
+
+        /* Button styling */
+        button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #f1c40f;
+            color: black;
+        }
+
+        button:hover {
+            background-color: #ffd700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Light bulb icon -->
+    <i id="bulb" class="fa-solid fa-lightbulb bulb"></i>
+
+    <!-- Toggle button -->
+    <button id="toggleBtn">Turn ON</button>
+
+    <!-- JavaScript -->
+    <script>
+        // Select elements
+        let bulb = document.getElementById("bulb");
+        let button = document.getElementById("toggleBtn");
+
+        // Track light state
+        let isOn = false;
+
+        // Button click event
+        button.addEventListener("click", function () {
+
+            if (isOn === false) {
+                bulb.classList.add("on");      // light ON
+                button.textContent = "Turn OFF";
+                isOn = true;
+            } else {
+                bulb.classList.remove("on");   // light OFF
+                button.textContent = "Turn ON";
+                isOn = false;
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
