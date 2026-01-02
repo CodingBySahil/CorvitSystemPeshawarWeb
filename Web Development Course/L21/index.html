@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Revision & Execution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Simple internal CSS just for readability -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .box {
+            background: #ffffff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Revision & Core Concepts</h1>
+    <p>This lecture revises JavaScript basics and explains how JavaScript runs in the browser.</p>
+
+    <!-- ===================== VARIABLES ===================== -->
+    <div class="box">
+        <h2>1. Variables in JavaScript</h2>
+        <p>
+            Variables are used to store data.
+            JavaScript provides three ways to create variables:
+            <strong>var</strong>, <strong>let</strong>, and <strong>const</strong>.
+        </p>
+    </div>
+
+    <script>
+        // var (old way)
+        var studentName = "Ali";
+
+        // let (block scoped, recommended)
+        let studentAge = 20;
+
+        // const (cannot be reassigned)
+        const institute = "Corvit Systems";
+
+        console.log(studentName);
+        console.log(studentAge);
+        console.log(institute);
+    </script>
+
+    <!-- ===================== DATA TYPES ===================== -->
+    <div class="box">
+        <h2>2. JavaScript Data Types</h2>
+        <p>
+            JavaScript has different data types to store different kinds of values.
+        </p>
+    </div>
+
+    <script>
+        // String
+        let courseName = "Web Development";
+
+        // Number
+        let duration = 3;
+
+        // Boolean
+        let isEnrolled = true;
+
+        // Undefined
+        let result;
+
+        // Null
+        let marks = null;
+
+        console.log(typeof courseName);
+        console.log(typeof duration);
+        console.log(typeof isEnrolled);
+        console.log(typeof result);
+        console.log(typeof marks);
+    </script>
+
+    <!-- ===================== JS EXECUTION ===================== -->
+    <div class="box">
+        <h2>3. How JavaScript Runs</h2>
+        <p>
+            JavaScript runs line by line from top to bottom.
+            This is called <strong>synchronous execution</strong>.
+        </p>
+    </div>
+
+    <script>
+        console.log("Line 1: JavaScript starts");
+        console.log("Line 2: Code executes step by step");
+        console.log("Line 3: JavaScript finishes");
+    </script>
+
+    <!-- ===================== STRICT MODE ===================== -->
+    <div class="box">
+        <h2>4. Strict Mode</h2>
+        <p>
+            Strict mode helps write safer JavaScript code.
+            It prevents bad practices and common mistakes.
+        </p>
+    </div>
+
+    <script>
+        "use strict";
+
+        // Correct way to declare variable
+        let teacher = "Sahil";
+        console.log(teacher);
+
+        // Uncommenting the line below will cause an error in strict mode
+        // undeclaredVariable = 10;
+    </script>
+
+    <!-- ===================== BEST PRACTICES ===================== -->
+    <div class="box">
+        <h2>5. JavaScript Best Practices</h2>
+        <p>Some important best practices:</p>
+        <ul>
+            <li>Use <strong>let</strong> and <strong>const</strong> instead of var</li>
+            <li>Write meaningful variable names</li>
+            <li>Use comments to explain code</li>
+            <li>Keep code clean and readable</li>
+            <li>Avoid global variables</li>
+        </ul>
+    </div>
+
+    <script>
+        // Bad practice
+        let x = 10;
+
+        // Good practice
+        let totalMarks = 10;
+
+        console.log(totalMarks);
+    </script>
+
+    <!-- ===================== REAL-LIFE USE CASES ===================== -->
+    <div class="box">
+        <h2>6. Real-Life Use Cases of JavaScript</h2>
+        <p>
+            JavaScript is used in real websites for:
+        </p>
+        <ul>
+            <li>Form validation</li>
+            <li>Button clicks</li>
+            <li>Showing and hiding content</li>
+            <li>Calculators</li>
+            <li>To-Do Apps</li>
+        </ul>
+    </div>
+
+    <script>
+        // real login system
+        let username = "student";
+        let password = "12345";
+
+        if (username === "student" && password === "12345") {
+            console.log("Login successful");
+        } else {
+            console.log("Login failed");
+        }
+    </script>
+
+    <hr>
+
+    <p><strong>End of Lecture</strong> – Practice this file by changing values and observing output in console.</p>
+
+</body>
+
+</html>
