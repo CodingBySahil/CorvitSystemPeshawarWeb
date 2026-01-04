@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 22 - JavaScript Loops</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Loops (for, while, do...while)</h1>
+    <p>Open browser console to see output</p>
+
+    <script>
+        /*
+        ====================================================
+        FOR LOOP
+        Use case: Processing a fixed number of items
+        Real example: Reading data from an array
+        ====================================================
+        */
+
+        // syntax
+        // for (initialization; condition; increment / decrement) {
+        //     // code to repeat
+        // }
+
+        let students = ["Ali", "Sara", "Ahmed", "Ayesha"];
+
+        console.log("FOR LOOP OUTPUT");
+
+        // Loop runs exact number of times based on array length
+        for (let i = 0; i < 4; i++) {
+            console.log("Student Name:", students[i]);
+        }
+
+        /*
+        ====================================================
+        WHILE LOOP
+        Use case: Input validation or unknown repetitions
+        Real example: Checking login attempts
+        ====================================================
+        */
+
+        // syntax
+        // while (condition) {
+        //     // code
+        // }
+
+
+        let attempts = 0;
+        let maxAttempts = 3;
+
+        console.log("WHILE LOOP OUTPUT");
+
+        // Loop continues while condition is true
+        while (attempts < maxAttempts) {
+            console.log("Login attempt number:", attempts + 1);
+            attempts++;
+        }
+
+        /*
+        ====================================================
+        DO...WHILE LOOP
+        Use case: Menu systems or retry operations
+        Real example: Showing menu at least once
+        ====================================================
+        */
+
+
+        // do...while syntax
+        // do {
+        //     // code
+        // } while (condition);
+
+        let userChoice;
+        let count = 0;
+
+        console.log("DO WHILE LOOP OUTPUT");
+
+        // Loop runs at least once even if condition is false
+        do {
+            console.log("Showing menu to user");
+            count++;
+        } while (count < 1);
+
+        /*
+        ====================================================
+        COMPARISON SUMMARY OUTPUT
+        ====================================================
+        */
+
+        console.log("All loops executed successfully");
+    </script>
+
+</body>
+
+</html>
