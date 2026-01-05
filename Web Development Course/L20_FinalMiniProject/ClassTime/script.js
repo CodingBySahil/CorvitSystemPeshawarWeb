@@ -1,33 +1,67 @@
-let taskCompleted = 0;
-let totalTask = 0;
+// const form = document.getElementById("todoForm");
+// const input = document.getElementById("inputText");
+// const list = document.getElementById("listParent");
+// const remAllBtn = document.getElementById("remAllBtn");
+// const remSingleBtn = document.getElementById("remSingleBtn");
 
-let taskCounter = document.getElementById("taskCounter");
-let todoForm = document.getElementById("todoForm");
-let inputText = document.getElementById("text");
-let deleteBtn = document.getElementById("deleteBtn");
-let taskList = document.getElementById("taskList");
-let add = document.getElementById("addTask")
-// update counter
-function updateCounter() {
-  taskCounter.innerHTML = `Total Tasks: ${totalTask} | Completed: ${taskCompleted}`;
-}
-updateCounter();
+// form.addEventListener("submit", function (event) {
+//   // event.preventDefault();
 
-function addTask(text) {
-  if (text == "") return;
+//   const value = input.value.trim();
+//   if (value === "") return;
 
-  let li = document.createElement("li");
-  li.textContent = text;
-  totalTask++;
-  updateCounter();
+//   const li = document.createElement("li");
+//   li.textContent = value;
 
-  let del = document.createElement("button");
-  del.textContent = "Del";
+//   list.appendChild(li);
+//   input.value = "";
+// });
 
-  li.appendChild(del);
+// remAllBtn.addEventListener("click", function () {
+//   list.innerHTML = "";
+// });
 
-  taskList.appendChild(li);
-}
+// remSingleBtn.addEventListener("click", function () {
+//   if (list.firstElementChild) {
+//     list.removeChild(list.firstElementChild);
+//   }
+// });
+
+// selected all elements
+let form = document.getElementById("todoForm");
+let input = document.getElementById("inputText");
+let remAllBtn = document.getElementById("remAllBtn");
+let remSingleBtn = document.getElementById("remSingleBtn");
+let listParent = document.getElementById("listParent");
+
+form.addEventListener("submit", function (event) {
+  // stop the default page loading
+  event.preventDefault();
+
+  // take data from input
+  let text = input.value;
+  text = text.trim()
+  // condition for checking if the string is empty
+  if (text.trim() == "") return;
+
+  // create a child node and put data
+  let listItem = document.createElement("li");
+  listItem.textContent = text;
+  // append in parent
+  listParent.appendChild(listItem);
+
+  // clearing the text area
+  input.value = "";
+});
+
+// clear all list data
+remAllBtn.addEventListener("click", function () {
+  listParent.innerHTML = "";
+});
+
+// remove single element
+remSingleBtn.addEventListener("click", function () {
+  listParent.removeChild(listParent.firstChild);
+});
 
 
-addTask("hello")
