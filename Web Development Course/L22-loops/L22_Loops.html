@@ -10,8 +10,32 @@
 
     <h1>JavaScript Loops (for, while, do...while)</h1>
     <p>Open browser console to see output</p>
+    <ul id="parent"></ul>
 
     <script>
+
+
+
+        let varName; // declaration
+
+        varName = "hello" // initialization
+
+
+        // let varName2 = "hello"
+        //    let counter = 1;
+        let totalSum = 0;
+        
+
+
+        for (let counter = 1; counter <= 6; counter++) {
+            //    loop body
+            if (counter % 2 == 1) {
+                totalSum = totalSum + counter;
+            }
+        }
+        console.log(totalSum);
+
+        //next line
         /*
         ====================================================
         FOR LOOP
