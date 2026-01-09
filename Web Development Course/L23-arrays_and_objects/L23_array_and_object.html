@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays & Objects - Beginner Example</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        ===============
+             ARRAYS
+        ===============
+        */
+
+        // Step 1: Create a simple array of student names
+        let studentRecord = ["Ali", "Hilal"];
+        console.log("Initial student record:", studentRecord);
+
+        // Step 2: Add a new student using push
+        studentRecord.push("Sara");
+        console.log("After push:", studentRecord);
+
+        // Step 3: Remove last student using pop
+        let removedStudent = studentRecord.pop();
+        console.log("Removed student:", removedStudent);
+        console.log("After pop:", studentRecord);
+
+        // Step 4: Display all students using forEach
+        console.log("Listing all students using forEach:");
+        studentRecord.forEach(function (student, index) {
+            console.log("Student", index + 1 + ":", student);
+        });
+
+        /*
+        ============================================
+        MOVING TO OBJECTS
+        ============================================
+        */
+
+        // Step 5: Create objects for each student
+        let student1 = { name: "Ali", age: 16, class: "10th" };
+        let student2 = { name: "Hilal", age: 15, class: "9th" };
+
+        console.log("Student 1 object:", student1);
+        console.log("Student 2 object:", student2);
+
+        // Step 6: Access object properties
+        console.log("Student 1 Name:", student1.name);
+        console.log("Student 2 Class:", student2["class"]);
+
+        // Step 7: Store objects in an array
+        let students = [student1, student2];
+        console.log("Array of student objects:", students);
+
+        // Step 8: Add new student object using push
+        let student3 = { name: "Sara", age: 14, class: "8th" };
+        students.push(student3);
+        console.log("After adding a new student:", students);
+
+        // Step 9: Remove last student object using pop
+        let removed = students.pop();
+        console.log("Removed object:", removed);
+        console.log("Students after pop:", students);
+
+        // Step 10: Loop through array of objects using forEach
+        console.log("List of students with details:");
+        students.forEach(function (student, index) {
+            console.log("Student", index + 1 + ": Name:", student.name,
+                "Age:", student.age, "Class:", student.class);
+        });
+
+    </script>
+
+</body>
+
+</html>
