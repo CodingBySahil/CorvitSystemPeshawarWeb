@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .clock {
+            background: black;
+            padding: 30px 60px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px cyan;
+            
+        }
+
+        #time {
+            color: cyan;
+            font-size: 60px;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="clock">
+        <span id="time">00:00:00</span>
+    </div>
+
+    <script>
+
+        setInterval(function () {
+
+            let tarekh = new Date();
+
+            let hours = tarekh.getHours();
+            let minutes = tarekh.getMinutes();
+            let seconds = tarekh.getSeconds();
+
+            // 2 digit format
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            document.getElementById("time").innerText =
+                hours + ":" + minutes + ":" + seconds;
+
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
