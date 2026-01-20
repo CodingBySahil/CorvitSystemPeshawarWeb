@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>L24 - Arrow Function & Ternary Operator</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        ===================
+        ARROW FUNCTION & TERNARY OPERATOR
+        ===================
+        
+        Today we will learn :
+
+        1) Why Arrow Functions were introduced
+        2) Why Ternary Operator exists
+        3) Real-life programming use cases
+        4) How modern JavaScript is written
+
+        ===================
+        */
+
+
+        /*
+        ===================
+        PART 1: NORMAL FUNCTION (OLD STYLE)
+        ===================
+        
+        Normal functions:
+        ==> Longer to write
+        ==> Used before ES6
+        ==> Still valid
+        ==> Less readable in callbacks
+        */
+
+        function calculateBill(price, tax) {
+            return price + tax;
+        }
+
+        console.log("Normal Function Bill:", calculateBill(1000, 150));
+
+        /*
+        Real-life thinking:
+        If you write many small helper functions,
+        normal syntax becomes repetitive.
+        */
+
+
+        /*
+        ===================
+        PART 2: WHY ARROW FUNCTIONS WERE INTRODUCED
+        ===================
+        
+        Arrow functions were created to:
+        ==> Reduce code length
+        ==> Improve readability
+        ==> Support modern JS patterns
+        
+        They are NOT for:
+        ==> Complex logic blocks
+        ==> Constructor functions
+        */
+
+        /*
+        Same logic using Arrow Function
+        */
+
+        const calculateBillArrow = (price, tax) => {
+            return price + tax;
+        };
+
+        console.log("Arrow Function Bill:", calculateBillArrow(2000, 300));
+
+
+        /*
+        Short arrow function (implicit return)
+        Used when logic is simple
+        */
+
+        const calculateBillShort = (price, tax) => price + tax;
+
+        console.log("Short Arrow Bill:", calculateBillShort(3000, 450));
+
+
+        /*
+        WHY THIS MATTERS IN REAL LIFE:
+        
+        Modern JavaScript uses:
+        ==> forEach
+        ==> map
+        ==> promises
+        ==> async / await
+        
+        Arrow functions make code:
+        ==> Short
+        ==> Clear
+        ==> Professional
+        */
+
+
+        /*
+        ===================
+        PART 3: REAL LIFE USE CASE (ARRAY PROCESSING)
+        ===================
+        
+        Scenario:
+        Student marks received from database
+        */
+
+        const studentMarks = [55, 72, 88];
+
+        /*
+        Using normal function
+        */
+
+        studentMarks.forEach(function (mark) {
+            console.log("Normal Function Mark:", mark);
+        });
+
+        /*
+        Using arrow function (preferred)
+        */
+
+        studentMarks.forEach(mark => {
+            console.log("Arrow Function Mark:", mark);
+        });
+
+        /*
+        Why arrow is better:
+        ==> Less typing
+        ==> Clear intention
+        ==> Easy to scan
+        */
+
+
+        /*
+        ===================
+        PART 4: TERNARY OPERATOR
+        ===================
+        
+        Ternary operator is a SHORT IF-ELSE
+        
+        Syntax:
+        condition ? true_value : false_value
+        
+        Why it exists:
+        ==> Avoid long if-else
+        ==> Keep decisions near usage
+        ==> Improve readability
+        ==> Widely used in UI & APIs
+        */
+
+
+        /*
+        ===================
+        PART 5: NORMAL IF-ELSE (OLD WAY)
+        ===================
+        */
+
+        let age = 17;
+        let permissionMessage;
+
+        if (age >= 18) {
+            permissionMessage = "Allowed";
+        } else {
+            permissionMessage = "Not Allowed";
+        }
+
+        console.log("IF-ELSE Result:", permissionMessage);
+
+
+        /*
+        ===================
+        PART 6: SAME LOGIC USING TERNARY
+        ===================
+        */
+
+        let permissionMessageTernary =
+            age >= 18 ? "Allowed" : "Not Allowed";
+
+        console.log("Ternary Result:", permissionMessageTernary);
+
+
+        /*
+        ===================
+        PART 7: REAL LIFE USE CASE OF TERNARY
+        ===================
+        
+        Scenario:
+        Online order system
+        */
+
+        let paymentDone = false;
+
+        let orderStatus =
+            paymentDone ? "Order Confirmed" : "Waiting for Payment";
+
+        console.log("Order Status:", orderStatus);
+
+
+        /*
+        ===================
+        PART 8: ARROW FUNCTION + TERNARY TOGETHER
+        ===================
+        
+        Very common in modern JS
+        */
+
+        const checkPassFail = marks =>
+            marks >= 50 ? "Pass" : "Fail";
+
+        console.log("Student Result:", checkPassFail(45));
+        console.log("Student Result:", checkPassFail(78));
+
+
+        /*
+        ===================
+        PART 9: WHEN NOT TO USE TERNARY
+        ===================
+        
+        Avoid ternary when:
+        ==> Logic is long
+        ==> Multiple conditions exist
+        ==> Code becomes confusing
+        
+        Rule:
+        Simple decision → ternary
+        Complex decision → if-else
+        */
+
+
+        /*
+        ===================
+        FINAL SUMMARY
+        ===================
+        
+        Arrow Functions:
+        ==> Short syntax
+        ==> Clean callbacks
+        ==> Modern JavaScript standard
+        ==> Best for small logic
+        
+        Ternary Operator:
+        ==> Short if-else
+        ==> Inline decision making
+        ==> Clean UI & status logic
+        
+        These are MUST-KNOW tools
+        for modern JavaScript developers.
+        ===================
+        */
+
+    </script>
+
+</body>
+
+</html>
