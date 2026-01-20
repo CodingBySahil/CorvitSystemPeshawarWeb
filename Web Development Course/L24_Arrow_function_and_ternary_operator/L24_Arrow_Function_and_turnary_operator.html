@@ -16,12 +16,8 @@
         
         Today we will learn :
 
-        1) Why Arrow Functions were introduced
-        2) Why Ternary Operator exists
-        3) Real-life programming use cases
-        4) How modern JavaScript is written
-
-        ===================
+        1) Arrow Function
+        2) Ternary Operator
         */
 
 
@@ -44,9 +40,8 @@
         console.log("Normal Function Bill:", calculateBill(1000, 150));
 
         /*
-        Real-life thinking:
-        If you write many small helper functions,
-        normal syntax becomes repetitive.
+        This function is just doing one operation and in 3 it is taking 3 lines, 
+        so for function like this we use arrow function which is shorter and new version of function
         */
 
 
@@ -59,10 +54,9 @@
         ==> Reduce code length
         ==> Improve readability
         ==> Support modern JS patterns
-        
-        They are NOT for:
-        ==> Complex logic blocks
-        ==> Constructor functions
+        ==> arrow function is not for Complex logic blocks
+        ==> arrow function can be one line function
+
         */
 
         /*
@@ -210,9 +204,9 @@
         Very common in modern JS
         */
 
-        const checkPassFail = marks =>
-            marks >= 50 ? "Pass" : "Fail";
-
+        const checkPassFail = marks => {
+            return marks >= 50 ? "Pass" : "Fail";
+        }
         console.log("Student Result:", checkPassFail(45));
         console.log("Student Result:", checkPassFail(78));
 
@@ -240,7 +234,6 @@
         
         Arrow Functions:
         ==> Short syntax
-        ==> Clean callbacks
         ==> Modern JavaScript standard
         ==> Best for small logic
         
