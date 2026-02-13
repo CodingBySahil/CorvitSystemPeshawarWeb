@@ -30,6 +30,16 @@ function Navbar() {
           </NavLink>
 
           <NavLink
+            to="/register"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-400 font-semibold"
+                : "hover:text-yellow-300 transition"
+            }
+          >
+            Register
+          </NavLink>
+          <NavLink
             to="/contact"
             className={({ isActive }) =>
               isActive
