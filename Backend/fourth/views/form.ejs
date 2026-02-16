@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Form</title>
+  </head>
+  <body>
+    <h2>GET Form</h2>
+
+    <form action="/submit-get" method="GET">
+      Name: <input type="text" name="name" /><br /><br />
+
+      Email: <input type="email" name="email" /><br /><br />
+
+      CNIC: <input type="number" name="cnic" /><br /><br />
+
+      Age: <input type="number" name="age" /><br /><br />
+
+      Gender:
+      <input type="radio" name="gender" value="Male" /> Male
+      <input type="radio" name="gender" value="Female" /> Female <br /><br />
+
+      Skills:
+      <input type="checkbox" name="skills" value="HTML" /> HTML
+      <input type="checkbox" name="skills" value="CSS" /> CSS
+      <input type="checkbox" name="skills" value="JS" /> JS <br /><br />
+
+      City:
+      <select name="city">
+        <option>Karachi</option>
+        <option>Lahore</option>
+        <option>Peshawar</option>
+      </select>
+      <br /><br />
+
+      <button type="submit">Submit GET</button>
+    </form>
+
+    <hr />
+
+    <h2>POST Form</h2>
+
+    <form action="/submit-post" method="POST">
+      Name: <input type="text" name="name" /><br /><br />
+
+      Email: <input type="email" name="email" /><br /><br />
+
+      CNIC: <input type="number" name="cnic" /><br /><br />
+
+      Age: <input type="number" name="age" /><br /><br />
+
+      Gender:
+      <input type="radio" name="gender" value="Male" /> Male
+      <input type="radio" name="gender" value="Female" /> Female <br /><br />
+
+      Skills:
+      <input type="checkbox" name="skills" value="HTML" /> HTML
+      <input type="checkbox" name="skills" value="CSS" /> CSS
+      <input type="checkbox" name="skills" value="JS" /> JS <br /><br />
+
+      City:
+      <select name="city">
+        <option>Karachi</option>
+        <option>Lahore</option>
+        <option>Peshawar</option>
+      </select>
+      <br /><br />
+
+      <button type="submit">Submit POST</button>
+    </form>
+  </body>
+</html>

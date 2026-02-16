@@ -1,48 +1,38 @@
 const express = require("express");
-
 const app = express();
 
-// app.get("/", (req, res) => res.send("Hello World!"));
+// Middleware to read POST form data
+app.use(express.urlencoded({ extended: true }));
 
-const userDetails = [
-  {
-    name: "Fiazan ahmad",
-    cnic: 1231312,
-    isMarried: true,
-  },
-  {
-    name: "Fiazan ahmad",
-    cnic: 1231312,
-    isMarried: true,
-  },
-  {
-    name: "shayan ahmad",
-    cnic: 1231312,
-    isMarried: true,
-  },
-  {
-    name: "ibrar ahmad",
-    cnic: 1231312,
-    isMarried: true,
-  },
-  {
-    name: "kamran ahmad",
-    cnic: 1231312,
-    isMarried: true,
-  },
-];
+// Set EJS
+app.set("view engine", "ejs");
+
+// Home Route → Show Form
 app.get("/", (req, res) => {
-  res.json({
-    name: "ram",
-    age: 23,
-  });
+  res.render("form");
 });
 
+// ===============================
+// GET FORM HANDLING
+// ===============================
+app.get("/submit-get", (req, res) => {
+  console.log("--------- GET FORM DATA ---------");
+  console.log(req.query);
 
-// http://localhost:3030/user
-app.get("/user", (req, res) => {
-  res.json(userDetails);
+  res.send("GET Data Received! Check Console");
 });
-app.listen(3030, (req, res) => {
-  console.log("server is running on http://localhost:3030");
+
+// ===============================
+// POST FORM HANDLING
+// ===============================
+app.post("/submit-post", (req, res) => {
+  console.log("--------- POST FORM DATA ---------");
+  console.log(req.body);
+
+  res.send("POST Data Received! Check Console");
+});
+
+// Start Server
+app.listen(3030, () => {
+  console.log("Server running at http://localhost:3030");
 });
