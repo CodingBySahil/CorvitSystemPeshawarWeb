@@ -4,68 +4,39 @@
     <title>User Form</title>
   </head>
   <body>
-    <h2>GET Form</h2>
+    <h2>User Registration</h2>
 
-    <form action="/submit-get" method="GET">
-      Name: <input type="text" name="name" /><br /><br />
+    <form action="/submit" method="POST">
+      <label>Username:</label><br />
+      <input type="text" name="username" required /><br /><br />
 
-      Email: <input type="email" name="email" /><br /><br />
+      <label>Email:</label><br />
+      <input type="email" name="email" required /><br /><br />
 
-      CNIC: <input type="number" name="cnic" /><br /><br />
+      <label>CNIC:</label><br />
+      <input type="text" name="cnic" required /><br /><br />
 
-      Age: <input type="number" name="age" /><br /><br />
-
-      Gender:
-      <input type="radio" name="gender" value="Male" /> Male
-      <input type="radio" name="gender" value="Female" /> Female <br /><br />
-
-      Skills:
-      <input type="checkbox" name="skills" value="HTML" /> HTML
-      <input type="checkbox" name="skills" value="CSS" /> CSS
-      <input type="checkbox" name="skills" value="JS" /> JS <br /><br />
-
-      City:
-      <select name="city">
-        <option>Karachi</option>
-        <option>Lahore</option>
-        <option>Peshawar</option>
-      </select>
-      <br /><br />
-
-      <button type="submit">Submit GET</button>
+      <button type="submit">Submit</button>
     </form>
+    <h2>Patient Registration</h2>
 
-    <hr />
+    <form action="/submit_patient" method="POST">
+      <label>Name:</label><br />
+      <input type="text" name="name" required /><br /><br />
 
-    <h2>POST Form</h2>
+      <label>Email:</label><br />
+      <input type="email" name="email" required /><br /><br />
 
-    <form action="/submit-post" method="POST">
-      Name: <input type="text" name="name" /><br /><br />
+      <label>CNIC:</label><br />
+      <input type="text" name="cnic" required /><br /><br />
 
-      Email: <input type="email" name="email" /><br /><br />
+      <label>Contact:</label><br />
+      <input type="text" name="contact" required /><br /><br />
 
-      CNIC: <input type="number" name="cnic" /><br /><br />
+      <label>age:</label><br />
+      <input type="number" name="age" required /><br /><br />
 
-      Age: <input type="number" name="age" /><br /><br />
-
-      Gender:
-      <input type="radio" name="gender" value="Male" /> Male
-      <input type="radio" name="gender" value="Female" /> Female <br /><br />
-
-      Skills:
-      <input type="checkbox" name="skills" value="HTML" /> HTML
-      <input type="checkbox" name="skills" value="CSS" /> CSS
-      <input type="checkbox" name="skills" value="JS" /> JS <br /><br />
-
-      City:
-      <select name="city">
-        <option>Karachi</option>
-        <option>Lahore</option>
-        <option>Peshawar</option>
-      </select>
-      <br /><br />
-
-      <button type="submit">Submit POST</button>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
