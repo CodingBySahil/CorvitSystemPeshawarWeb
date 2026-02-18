@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+
+  const navigate = useNavigate();
 
   const fetchProducts = async () => {
     const response = await fetch("https://dummyjson.com/products");
@@ -46,19 +49,19 @@ const Products = () => {
               </h3>
 
               {/* Brand & Category */}
-              <div className="flex gap-2 flex-wrap">
+              {/* <div className="flex gap-2 flex-wrap">
                 <span className="px-3 py-1 text-xs rounded-full bg-indigo-100 text-indigo-600">
                   {product.brand}
                 </span>
                 <span className="px-3 py-1 text-xs rounded-full bg-purple-100 text-purple-600">
                   {product.category}
                 </span>
-              </div>
+              </div> */}
 
               {/* Description */}
-              <p className="text-sm text-gray-600 line-clamp-3">
+              {/* <p className="text-sm text-gray-600 line-clamp-3">
                 {product.description}
-              </p>
+              </p> */}
 
               {/* Price + Discount */}
               <div className="flex items-center justify-between mt-3">
@@ -71,7 +74,7 @@ const Products = () => {
               </div>
 
               {/* Rating + Stock */}
-              <div className="flex items-center justify-between mt-2">
+              {/* <div className="flex items-center justify-between mt-2">
                 <span className="text-yellow-500 font-semibold flex items-center gap-1">
                   ⭐ {product.rating}
                 </span>
@@ -85,13 +88,13 @@ const Products = () => {
                 >
                   {product.stock > 0 ? "In Stock" : "Out of Stock"}
                 </span>
-              </div>
+              </div> */}
 
               {/* Divider */}
               <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3"></div>
 
               {/* Extra Info */}
-              <div className="grid grid-cols-2 gap-2 text-xs text-gray-500">
+              {/* <div className="grid grid-cols-2 gap-2 text-xs text-gray-500">
                 <p>
                   <span className="font-semibold">SKU:</span> {product.sku}
                 </p>
@@ -107,7 +110,7 @@ const Products = () => {
                   <span className="font-semibold">Min:</span>{" "}
                   {product.minimumOrderQuantity}
                 </p>
-              </div>
+              </div> */}
 
               {/* Reviews */}
               <div className="pt-3 flex justify-between items-center">
@@ -115,7 +118,9 @@ const Products = () => {
                   {product.reviews?.length} Reviews
                 </p>
 
-                <button className="px-4 py-1.5 text-xs rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-purple-500 hover:to-pink-500 transition shadow-md">
+                <button
+                onClick={()=>navigate(`/product/${product.id}`)}
+                className="px-4 py-1.5 text-xs rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-purple-500 hover:to-pink-500 transition shadow-md">
                   View Details
                 </button>
               </div>
